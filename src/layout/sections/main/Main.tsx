@@ -2,11 +2,13 @@ import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import mainPhoto from "../../../assets/images/image-1.webp"
 import styled from "styled-components";
+import head from "../../../assets/images/mainPhoto.webp"
+import {Icon} from "../../../components/Icon/Icon";
 
 export const Main = () => {
     return (
         <div>
-            <FlexWrapper justify="space-around">
+            <StyledMain justify="space-around">
                 <FlexWrapper direction="column" width={"447px"} height={"337"}>
                     <h2>HELLO</h2>
                     <span>I'M MYKYTA<b/> KUTUZOV</span>
@@ -17,13 +19,20 @@ export const Main = () => {
                     <button type={"button"}>CONTACT ME</button>
                 </FlexWrapper>
 
-                <img src={mainPhoto} alt="mainPhoto"/>
-
-            </FlexWrapper>
-
+                <div>
+                    {/*<Photo src={mainPhoto} alt="mainPhoto"/>*/}
+                    {/*<Icon iconId={"ellipse1"} width={"869"} height={"880"} viewBox={"0 0 879 880"} svgText={"123"} fontSize={"50"} textAnchor={"middle"} textFill={"black"} x={"50%"} y={"50%"}/>*/}
+                    <Icon iconId={"ellipse3"} width={"90"} height={"90"} viewBox={"0 0 90 90"}/>
+                </div>
+            </StyledMain>
         </div>
     );
 };
+
+const StyledMain = styled(FlexWrapper)`
+    min-height: 100vh;
+    background-color: #7fbfff;
+`
 
 const Photo = styled.img`
     width: 456px;
