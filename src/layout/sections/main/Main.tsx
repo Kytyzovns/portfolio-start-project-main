@@ -4,6 +4,7 @@ import mainPhoto from "../../../assets/images/image-1.webp"
 import styled from "styled-components";
 import head from "../../../assets/images/mainPhoto.webp"
 import {Icon} from "../../../components/Icon/Icon";
+import {Circle} from "./Circle";
 
 export const Main = () => {
     return (
@@ -19,24 +20,76 @@ export const Main = () => {
                     <button type={"button"}>CONTACT ME</button>
                 </FlexWrapper>
 
-                <div>
-                    {/*<Photo src={mainPhoto} alt="mainPhoto"/>*/}
-                    {/*<Icon iconId={"ellipse1"} width={"869"} height={"880"} viewBox={"0 0 879 880"} svgText={"123"} fontSize={"50"} textAnchor={"middle"} textFill={"black"} x={"50%"} y={"50%"}/>*/}
-                    <Icon iconId={"ellipse3"} width={"90"} height={"90"} viewBox={"0 0 90 90"}/>
-                </div>
+                <PhotoContainer>
+
+                    <StyledIcon iconId={"ellipse1"} width={"869"} height={"880"} viewBox={"0 0 879 880"}/>
+                    <Photo src={mainPhoto} alt="mainPhoto"/>
+
+                    <MainHead src={head} alt="head"/>
+                    {/*<StyledCircle/>*/}
+
+                    <Circle>
+                        <p>UI</p>
+                    </Circle>
+
+                    <Circle>
+                        <p>{"</"}</p>
+                    </Circle>
+
+                    <Circle>
+                        <p>UX</p>
+                    </Circle>
+
+                    <Circle>
+                        <p>PS</p>
+                    </Circle>
+                </PhotoContainer>
             </StyledMain>
         </div>
     );
 };
 
+
 const StyledMain = styled(FlexWrapper)`
     min-height: 100vh;
-    background-color: #7fbfff;
+    background-color: rgba(20, 27, 27, 0.07);
 `
 
 const Photo = styled.img`
     width: 456px;
-    height: 700px;
+    height: 633px;
     object-fit: cover;
+    position: absolute;
+    top: 59px;
+    left: 73px;
 `
 
+const MainHead = styled.img`
+    width: 357px;
+    height: 286px;
+    position: absolute;
+    top: 40px;
+    left: 120px;
+`
+
+const PhotoContainer = styled.div`
+    width: 632px;
+    height: 674px;
+    border: thin solid;
+    position: relative;
+
+`
+
+const StyledIcon = styled(Icon)`
+    position: absolute;
+    top: 50px;
+    left: 57px;
+`
+// const StyledCircle = styled.div`
+//     width: 575px;
+//     height: 575px;
+//     border-radius: 100%;
+//     stroke-width: 67px;
+//     stroke: #00c4f0;
+//     box-shadow: 0 0 152px 0 rgba(0, 196, 240, 0.42);
+// `
