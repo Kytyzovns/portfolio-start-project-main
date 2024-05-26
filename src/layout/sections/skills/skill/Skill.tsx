@@ -1,9 +1,12 @@
 import React from 'react';
 import {Icon} from "../../../../components/Icon/Icon";
 import styled from "styled-components";
+import {StyledSkill} from "./StyledSkill";
+import {SkillTitle} from "./SkillTitle";
+import {SkillText} from "./SkillText";
 
 type SkillProps = {
-    iconId: string;
+    iconId?: string;
     title?: string;
     isText?: boolean;
     text?: string;
@@ -13,7 +16,11 @@ type SkillProps = {
 }
 
 export const Skill = (props: SkillProps) => {
-    if (props.isText) {
+    let id = "";
+    if (props.iconId !== undefined) {
+        id = props.iconId;
+    }
+    if (props.isText === true) {
         return (
             <StyledSkill>
                 <SkillTitle>{props.title}</SkillTitle>
@@ -23,22 +30,14 @@ export const Skill = (props: SkillProps) => {
     } else {
         return (
             <StyledSkill>
-                <Icon iconId={props.iconId} width={props.iconWidth} height={props.iconHeight} viewBox={props.viewBox}/>
+                <Icon iconId={id} width={props.iconWidth} height={props.iconHeight} viewBox={props.viewBox}/>
                 <SkillText>{props.text}</SkillText>
             </StyledSkill>
         );
     }
 };
 
-const StyledSkill = styled.div`
-    width: 33%;
-    background-color: darkgray;
-    margin: 10px;
-`
 
-const SkillTitle = styled.h3`
 
-`
 
-const SkillText = styled.p`
-`
+

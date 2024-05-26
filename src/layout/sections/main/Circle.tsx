@@ -13,8 +13,8 @@ export const Circle = styled.div<CircleProps>`
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: ${props => props.top};
-    left: ${props => props.left};
+    top: ${props => props.top || "10px"};
+    left: ${props => props.left || "10px"};
     p {
         font-weight: 700;
         font-size: 36px;
