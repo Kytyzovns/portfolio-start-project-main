@@ -6,7 +6,7 @@ import {StyledSkills} from "./StyledSkills";
 export const Skills = () => {
     return (
         <StyledSkills>
-            <FlexWrapper wrap="wrap">
+            <FlexWrapper wrap="wrap" justify={"center"}>
                 <Skill iconId={"pen"} text={"ProductDesign"} iconHeight={"108"} iconWidth={"107"} viewBox={"0 0 107 108"}/>
                 <Skill isText = {true} title={"UX/UI"} text={"UX/UI Design"}/>
                 <Skill iconId={"nav"} text={"Icon Design"}/>

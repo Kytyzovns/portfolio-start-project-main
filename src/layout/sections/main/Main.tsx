@@ -2,7 +2,7 @@ import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import mainPhoto from "../../../assets/images/image-1.webp"
 import styled from "styled-components";
-import head from "../../../assets/images/mainPhoto.webp"
+import head from "../../../assets/images/mainPhotoHead.webp"
 import {Icon} from "../../../components/Icon/Icon";
 import {Circle} from "./Circle";
 
