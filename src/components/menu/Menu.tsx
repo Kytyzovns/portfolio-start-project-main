@@ -1,9 +1,17 @@
 import React from 'react';
 import styled from "styled-components";
 
-export const Menu = () => {
+type MenuProps = {
+    direction: "column" | "row";
+    gap: string;
+    weight?: string;
+    fontSize?: string;
+    fontColor?: string;
+}
+
+export const Menu = (props: MenuProps) => {
     return (
-        <StyledMenu>
+        <StyledNav direction={props.direction} gap={props.gap} fontSize={props.fontSize} fontColor={props.fontColor} weight={props.weight}>
             <ul>
                 <li>
                     <a href="">Home</a>
@@ -21,14 +29,20 @@ export const Menu = () => {
                     <a href="">Contact</a>
                 </li>
             </ul>
-        </StyledMenu>
+        </StyledNav>
     );
 };
 
-const StyledMenu = styled.nav`
- ul{
-     display: flex;
-     gap: 80px;
-     list-style: none;
- }
+
+const StyledNav = styled.nav<MenuProps>`
+    ul {
+        display: flex;
+        flex-direction: ${props => props.direction};
+        gap: ${props => props.gap};
+        list-style: none;
+        font-size: ${props => props.weight};
+        font-size: ${props => props.fontSize};
+        color: ${props => props.fontColor};
+    }
 `
+
