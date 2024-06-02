@@ -8,7 +8,7 @@ import {Circle} from "./Circle";
 
 export const Main = () => {
     return (
-        <div>
+        <section>
             <StyledMain justify="space-around">
                 <FlexWrapper direction="column" width={"447px"} height={"337"}>
                     <h2>HELLO</h2>
@@ -45,14 +45,13 @@ export const Main = () => {
                     </Circle>
                 </PhotoContainer>
             </StyledMain>
-        </div>
+        </section>
     );
 };
 
 
 const StyledMain = styled(FlexWrapper)`
     min-height: 100vh;
-    background-color: rgba(20, 27, 27, 0.07);
 `
 
 const Photo = styled.img`

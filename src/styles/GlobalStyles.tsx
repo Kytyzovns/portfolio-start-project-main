@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import {theme} from "./Theme";
 
 export const GlobalStyles = createGlobalStyle`
     @font-face {
@@ -46,6 +47,12 @@ export const GlobalStyles = createGlobalStyle`
         font-style: normal;
     }
     
+    *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
     body {
         margin: 0;
         font-family: 'Arodora', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -53,6 +60,7 @@ export const GlobalStyles = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        color: ${theme.colors.primaryTextColor}
     }
 
     code {
@@ -60,4 +68,24 @@ export const GlobalStyles = createGlobalStyle`
         monospace;
     }
 
+    a {
+        text-decoration: none;
+    }
+    
+    ul {
+        list-style: none;
+    }
+    
+    button {
+        background-color: unset;
+        border: none;
+    }
+    
+    section:nth-of-type(odd) {
+        background-image: ${theme.colors.primaryBg};
+    }
+    section:nth-of-type(even) {
+        background-image: ${theme.colors.secondaryBg};
+    }
+    
 `
