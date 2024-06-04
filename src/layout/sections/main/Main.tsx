@@ -5,53 +5,57 @@ import styled from "styled-components";
 import head from "../../../assets/images/mainPhotoHead.webp"
 import {Icon} from "../../../components/Icon/Icon";
 import {Circle} from "./Circle";
+import {Container} from "../../../components/Container";
 
 export const Main = () => {
     return (
-        <section>
-            <StyledMain justify="space-around">
-                <FlexWrapper direction="column" width={"447px"} height={"337"}>
-                    <h2>HELLO</h2>
-                    <span>I'M MYKYTA<b/> KUTUZOV</span>
-                    <p>I've been doing web design, front-end and back-end development for a year now.
-                        Do you need a website design, site layout, or maybe a turnkey website?
-                        Then contact me
-                    </p>
-                    <button type={"button"}>CONTACT ME</button>
+        <StyledMain>
+            <Container>
+                <FlexWrapper justify={"space-around"}>
+                    <FlexWrapper direction="column" width={"447px"} height={"337"}>
+                        <h2>HELLO</h2>
+                        <span>I'M MYKYTA<b/> KUTUZOV</span>
+                        <p>I've been doing web design, front-end and back-end development for a year now.
+                            Do you need a website design, site layout, or maybe a turnkey website?
+                            Then contact me
+                        </p>
+                        <button type={"button"}>CONTACT ME</button>
+                    </FlexWrapper>
+
+                    <PhotoContainer>
+
+                        <StyledIcon iconId={"ellipse1"} width={"869"} height={"880"} viewBox={"0 0 879 880"}/>
+                        <Photo src={mainPhoto} alt="mainPhoto"/>
+
+                        <MainHead src={head} alt="head"/>
+                        {/*<StyledCircle/>*/}
+
+                        <Circle>
+                            <p>UI</p>
+                        </Circle>
+
+                        <Circle>
+                            <p>{"</"}</p>
+                        </Circle>
+
+                        <Circle>
+                            <p>UX</p>
+                        </Circle>
+
+                        <Circle>
+                            <p>PS</p>
+                        </Circle>
+                    </PhotoContainer>
                 </FlexWrapper>
-
-                <PhotoContainer>
-
-                    <StyledIcon iconId={"ellipse1"} width={"869"} height={"880"} viewBox={"0 0 879 880"}/>
-                    <Photo src={mainPhoto} alt="mainPhoto"/>
-
-                    <MainHead src={head} alt="head"/>
-                    {/*<StyledCircle/>*/}
-
-                    <Circle>
-                        <p>UI</p>
-                    </Circle>
-
-                    <Circle>
-                        <p>{"</"}</p>
-                    </Circle>
-
-                    <Circle>
-                        <p>UX</p>
-                    </Circle>
-
-                    <Circle>
-                        <p>PS</p>
-                    </Circle>
-                </PhotoContainer>
-            </StyledMain>
-        </section>
+            </Container>
+        </StyledMain>
     );
 };
 
 
-const StyledMain = styled(FlexWrapper)`
+const StyledMain = styled.section`
     min-height: 100vh;
+    margin-top: 74px;
 `
 
 const Photo = styled.img`

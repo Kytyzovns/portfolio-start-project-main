@@ -32,10 +32,15 @@ export const HeaderMenu = (props: MenuProps) => {
 
 
 const StyledNav = styled.nav`
+    display: flex;
+    align-items: center;
+    min-height: 100%;
     ul {
         display: flex;
         list-style: none;
-        gap: 60px;
+        gap:145px;
+        justify-content: center;
+        min-height: 100%;
     }
 `
 

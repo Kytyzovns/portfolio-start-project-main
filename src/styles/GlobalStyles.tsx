@@ -2,50 +2,51 @@ import {createGlobalStyle} from "styled-components";
 import {theme} from "./Theme";
 
 export const GlobalStyles = createGlobalStyle`
-    @font-face {
-        font-family: 'Arodora';
-        src: url('../assets/fonts/ArodoraPro-Light.eot?') format('eot'),
-        url('../assets/fonts/ArodoraPro-Light.woff2') format('woff2'),
-        url('../assets/fonts/ArodoraPro-Light.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Next-art';
-        src: url('../assets/fonts/NEXTART.eot?') format('eot'),
-        url('../assets/fonts/NEXTART.woff2') format('woff2'),
-        url('../assets/fonts/NEXTART.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Next-art';
-        src: url('../assets/fonts/NEXTART-Bold.eot?') format('eot'),
-        url('../assets/fonts/NEXTART-Bold.woff2') format('woff2'),
-        url('../assets/fonts/NEXTART-Bold.ttf') format('truetype');
-        font-weight: bold;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'Next-art';
-        src: url('../assets/fonts/NEXTART-SemiBold.eot?') format('eot'),
-        url('../assets/fonts/NEXTART-SemiBold.woff2') format('woff2'),
-        url('../assets/fonts/NEXTART-SemiBold.ttf') format('truetype');
-        font-weight: 600;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: 'Nico-moji';
-        src: url('../assets/fonts/NicoMoji-Regular.eot?') format('eot'),
-        url('../assets/fonts/NicoMoji-Regular.woff2') format('woff2'),
-        url('../assets/fonts/NicoMoji-Regular.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
+    //@font-face {
+    //    font-family: 'Arodora';
+    //    src: url('../assets/fonts/ArodoraPro-Light.eot?') format('eot'),
+    //    url('../assets/fonts/ArodoraPro-Light.woff2') format('woff2'),
+    //    url('../assets/fonts/ArodoraPro-Light.ttf') format('truetype');
+    //    font-weight: normal;
+    //    font-style: normal;
+    //}
+    //
+    //@font-face {
+    //    font-family: 'Next-art';
+    //    src: url('../assets/fonts/NEXTART.eot?') format('eot'),
+    //    url('../assets/fonts/NEXTART.woff2') format('woff2'),
+    //    url('../assets/fonts/NEXTART.ttf') format('truetype');
+    //    font-weight: normal;
+    //    font-style: normal;
+    //}
+    //
+    //@font-face {
+    //    font-family: 'Next-art';
+    //    src: url('../assets/fonts/NEXTART-Bold.eot?') format('eot'),
+    //    url('../assets/fonts/NEXTART-Bold.woff2') format('woff2'),
+    //    url('../assets/fonts/NEXTART-Bold.ttf') format('truetype');
+    //    font-weight: bold;
+    //    font-style: normal;
+    //}
+    //
+    //@font-face {
+    //    font-family: 'Next-art';
+    //    src: url('../assets/fonts/NEXTART-SemiBold.eot?') format('eot'),
+    //    url('../assets/fonts/NEXTART-SemiBold.woff2') format('woff2'),
+    //    url('../assets/fonts/NEXTART-SemiBold.ttf') format('truetype');
+    //    font-weight: 600;
+    //    font-style: normal;
+    //}
+    //
+    //@font-face {
+    //    font-family: 'Nico-moji';
+    //    src: url('../assets/fonts/NicoMoji-Regular.eot?') format('eot'),
+    //    url('../assets/fonts/NicoMoji-Regular.woff2') format('woff2'),
+    //    url('../assets/fonts/NicoMoji-Regular.ttf') format('truetype');
+    //    font-weight: normal;
+    //    font-style: normal;
+    //}
+    //
     
     *, *::before, *::after {
         margin: 0;
