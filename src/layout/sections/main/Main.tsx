@@ -6,20 +6,22 @@ import head from "../../../assets/images/mainPhotoHead.webp"
 import {Icon} from "../../../components/Icon/Icon";
 import {Circle} from "./Circle";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper justify={"space-around"}>
-                    <FlexWrapper direction="column" width={"447px"} height={"337"}>
-                        <h2>HELLO</h2>
-                        <span>I'M MYKYTA<b/> KUTUZOV</span>
-                        <p>I've been doing web design, front-end and back-end development for a year now.
+                <FlexWrapper justify={"space-between"} align={"center"}>
+                    <FlexWrapper gap={"27px"} direction={"column"} justify={"flex-start"} height={"content"}>
+                        <Greeting>HELLO</Greeting>
+                        <Name>I'M MYKYTA</Name>
+                        <Name>KUTUZOV</Name>
+                        <Description>I've been doing web design, front-end and back-end development for a year now.
                             Do you need a website design, site layout, or maybe a turnkey website?
                             Then contact me
-                        </p>
-                        <button type={"button"}>CONTACT ME</button>
+                        </Description>
+                        <StyledBtn type={"button"}>CONTACT ME</StyledBtn>
                     </FlexWrapper>
 
                     <PhotoContainer>
@@ -53,7 +55,40 @@ export const Main = () => {
 };
 
 
+const StyledBtn = styled.button`
+    font-family: Next-art, sans-serif;
+    border-radius: 6px;
+    width: 200px;
+    height: 47px;
+    box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
+    background: linear-gradient(315deg, #e2a300 0%, #e29500 100%);
+    font-weight: 900;
+    font-size: 18px;
+    color: ${theme.colors.buttonTextColor};
+`
+const Greeting = styled.h2`
+    font-family: Next-art, sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    color: ${theme.colors.primaryTextColor};
+`
+
+const Name = styled.h2`
+    font-family: Next-art, sans-serif;
+    font-weight: 700;
+    font-size: 72px;
+    color: ${theme.colors.primaryTextColor};
+`
+
+const Description = styled.p`
+    max-width: 430px;
+    font-weight: 300;
+    font-size: 18px;
+    font-family: Arodora, sans-serif;
+    color: ${theme.colors.primaryTextColor};
+`
 const StyledMain = styled.section`
+    display: flex;
     min-height: 100vh;
     margin-top: 74px;
 `

@@ -17,7 +17,7 @@ export const Header = () => {
                         <Logo iconId="logo" width="65px" height="48px" viewBox="0 0 65 48"/>
                         <StyledLogoText>Notitanic</StyledLogoText>
                     </FlexWrapper>
-                    <HeaderMenu items={["Contacts", "About me", "Portfolio", "Links"]}/>
+                    <HeaderMenu items={["Home", "About me", "Portfolio", "Contact"]}/>
                 </FlexWrapper>
             </StyledHeader>
         </Container>
