@@ -19,5 +19,5 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
     width: ${props => props.width || "auto"};
     height: ${props => props.height || "100%"};
     gap: ${props => props.gap};
-    border: 1px solid yellow;
+    //border: 1px solid yellow;
 `

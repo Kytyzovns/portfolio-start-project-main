@@ -1,8 +1,8 @@
 import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import mainPhoto from "../../../assets/images/image-1.webp"
+import mainPhoto from "../../../assets/images/mainPhoto.webp"
 import styled from "styled-components";
-import head from "../../../assets/images/mainPhotoHead.webp"
+
 import {Icon} from "../../../components/Icon/Icon";
 import {Circle} from "./Circle";
 import {Container} from "../../../components/Container";
@@ -26,27 +26,26 @@ export const Main = () => {
 
                     <PhotoContainer>
 
-                        <StyledIcon iconId={"ellipse1"} width={"869"} height={"880"} viewBox={"0 0 879 880"}/>
+                        {/*<StyledIcon iconId={"ellipse1"} width={"869"} height={"880"} viewBox={"0 0 879 880"}/>*/}
                         <Photo src={mainPhoto} alt="mainPhoto"/>
 
-                        <MainHead src={head} alt="head"/>
                         {/*<StyledCircle/>*/}
 
-                        <Circle>
-                            <p>UI</p>
-                        </Circle>
+                        {/*<Circle>*/}
+                        {/*    <p>UI</p>*/}
+                        {/*</Circle>*/}
 
-                        <Circle>
-                            <p>{"</"}</p>
-                        </Circle>
+                        {/*<Circle>*/}
+                        {/*    <p>{"</"}</p>*/}
+                        {/*</Circle>*/}
 
-                        <Circle>
-                            <p>UX</p>
-                        </Circle>
+                        {/*<Circle>*/}
+                        {/*    <p>UX</p>*/}
+                        {/*</Circle>*/}
 
-                        <Circle>
-                            <p>PS</p>
-                        </Circle>
+                        {/*<Circle>*/}
+                        {/*    <p>PS</p>*/}
+                        {/*</Circle>*/}
                     </PhotoContainer>
                 </FlexWrapper>
             </Container>
@@ -89,33 +88,22 @@ const Description = styled.p`
 `
 const StyledMain = styled.section`
     display: flex;
-    min-height: 100vh;
+    max-height: 670px;
     margin-top: 74px;
 `
 
 const Photo = styled.img`
     width: 456px;
     height: 633px;
-    object-fit: cover;
-    position: absolute;
-    top: 59px;
-    left: 73px;
-`
-
-const MainHead = styled.img`
-    width: 357px;
-    height: 286px;
-    position: absolute;
-    top: 40px;
-    left: 120px;
+    margin: 0;
 `
 
 const PhotoContainer = styled.div`
-    width: 632px;
-    height: 674px;
-    border: thin solid;
-    position: relative;
-
+    padding: 0;
+    border: thin solid yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 `
 
 const StyledIcon = styled(Icon)`
