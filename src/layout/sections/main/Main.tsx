@@ -7,6 +7,7 @@ import {Icon} from "../../../components/Icon/Icon";
 import {Circle} from "./Circle";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
+import {StyledIcon} from "../../../components/Icon/StyledIcon";
 
 export const Main = () => {
     return (
@@ -95,22 +96,18 @@ const StyledMain = styled.section`
 const Photo = styled.img`
     width: 456px;
     height: 633px;
-    margin: 0;
 `
 
 const PhotoContainer = styled.div`
+    position: relative;
     padding: 0;
     border: thin solid yellow;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+   
 `
 
-const StyledIcon = styled(Icon)`
-    position: absolute;
-    top: 50px;
-    left: 57px;
-`
 // const StyledCircle = styled.div`
 //     width: 575px;
 //     height: 575px;
