@@ -31,7 +31,7 @@ const StyledHeader = styled.header`
     top: 0;
     left: 0;
     right: 0;
-    z-index: 99999;
+    z-index: 99999999;
 `
 
 const StyledLogoText = styled.span`

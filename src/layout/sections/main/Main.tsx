@@ -26,34 +26,32 @@ export const Main = () => {
                     </FlexWrapper>
 
                     <PhotoContainer>
-
-                        {/*<StyledIcon iconId={"ellipse1"} width={"869"} height={"880"} viewBox={"0 0 879 880"}/>*/}
+                        <StyledCircle></StyledCircle>
                         <Photo src={mainPhoto} alt="mainPhoto"/>
 
-                        {/*<StyledCircle/>*/}
+                        <StyledCircle/>
 
-                        {/*<Circle>*/}
-                        {/*    <p>UI</p>*/}
-                        {/*</Circle>*/}
+                        <Circle>
+                            <p>UI</p>
+                        </Circle>
 
-                        {/*<Circle>*/}
-                        {/*    <p>{"</"}</p>*/}
-                        {/*</Circle>*/}
+                        <Circle>
+                            <p>{"</"}</p>
+                        </Circle>
 
-                        {/*<Circle>*/}
-                        {/*    <p>UX</p>*/}
-                        {/*</Circle>*/}
+                        <Circle>
+                            <p>UX</p>
+                        </Circle>
 
-                        {/*<Circle>*/}
-                        {/*    <p>PS</p>*/}
-                        {/*</Circle>*/}
+                        <Circle>
+                            <p>PS</p>
+                        </Circle>
                     </PhotoContainer>
                 </FlexWrapper>
             </Container>
         </StyledMain>
     );
 };
-
 
 const StyledBtn = styled.button`
     font-family: Next-art, sans-serif;
@@ -91,11 +89,13 @@ const StyledMain = styled.section`
     display: flex;
     max-height: 670px;
     margin-top: 74px;
+    overflow: hidden;
 `
 
 const Photo = styled.img`
-    width: 456px;
-    height: 633px;
+    width: 465px;
+    height: 675px;
+    z-index: 99999;
 `
 
 const PhotoContainer = styled.div`
@@ -105,14 +105,15 @@ const PhotoContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-   
 `
 
-// const StyledCircle = styled.div`
-//     width: 575px;
-//     height: 575px;
-//     border-radius: 100%;
-//     stroke-width: 67px;
-//     stroke: #00c4f0;
-//     box-shadow: 0 0 152px 0 rgba(0, 196, 240, 0.42);
-// `
+const StyledCircle = styled.div`
+    border: solid 67px ${theme.colors.accent};
+    left: -65px;
+    bottom: 0;
+    position: absolute;
+    width: 575px;
+    height: 575px;
+    border-radius: 100%;
+    box-shadow: 0 0 152px 0 rgba(0, 196, 240, 0.42);
+`
