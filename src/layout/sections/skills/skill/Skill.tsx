@@ -2,6 +2,7 @@ import React from 'react';
 import {Icon} from "../../../../components/Icon/Icon";
 import styled from "styled-components";
 import {theme} from "../../../../styles/Theme";
+import {FlexWrapper} from "../../../../components/FlexWrapper";
 
 type SkillProps = {
     iconId?: string;
@@ -21,14 +22,18 @@ export const Skill = (props: SkillProps) => {
     if (props.isText === true) {
         return (
             <StyledSkill>
-                <SkillTitle>{props.title}</SkillTitle>
+                <FlexWrapper direction={"column"} justify={"center"}>
+                    <SkillTitle>{props.title}</SkillTitle>
+                </FlexWrapper>
                 <SkillText>{props.text}</SkillText>
             </StyledSkill>
         );
     } else {
         return (
             <StyledSkill>
-                <Icon iconId={id} width={props.iconWidth} height={props.iconHeight} viewBox={props.viewBox}/>
+                <FlexWrapper direction={"column"} justify={"center"}>
+                    <Icon iconId={id} width={props.iconWidth} height={props.iconHeight} viewBox={props.viewBox}/>
+                </FlexWrapper>
                 <SkillText>{props.text}</SkillText>
             </StyledSkill>
         );
