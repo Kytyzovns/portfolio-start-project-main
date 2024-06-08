@@ -1,8 +1,11 @@
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme";
 
 type CircleProps = {
     top?: string;
     left?: string;
+    right?: string;
+    bottom?: string;
 }
 export const Circle = styled.div<CircleProps>`
     width: 90px;
@@ -13,11 +16,22 @@ export const Circle = styled.div<CircleProps>`
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: ${props => props.top || "10px"};
-    left: ${props => props.left || "10px"};
-    p {
+    top: ${props => props.top};
+    left: ${props => props.left};
+    right: ${props => props.right};
+    bottom: ${props => props.bottom};
+    
+    span {
+        font-family: Next-art, sans-serif;
         font-weight: 700;
         font-size: 36px;
-        color: #00c4f0;
+        color: ${theme.colors.accent};  
+    }
+    
+    p {
+        vertical-align: middle;
+        font-weight: 700;
+        font-size: 36px;
+        color: ${theme.colors.accent};
     }
 `

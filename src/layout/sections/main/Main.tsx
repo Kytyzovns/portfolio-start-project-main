@@ -31,20 +31,20 @@ export const Main = () => {
 
                         <StyledCircle/>
 
-                        <Circle>
-                            <p>UI</p>
+                        <Circle top={"100px"} right={"22px"}>
+                            <CircleText>UI</CircleText>
                         </Circle>
 
-                        <Circle>
-                            <p>{"</"}</p>
+                        <Circle left={"-45px"} top={"130px"}>
+                            <span>{"</"}</span>
                         </Circle>
 
-                        <Circle>
-                            <p>UX</p>
+                        <Circle left={"-120px"} top={"300px"}>
+                            <span>UX</span>
                         </Circle>
 
-                        <Circle>
-                            <p>PS</p>
+                        <Circle left={"-90px"} bottom={"100px"}>
+                            <span>PS</span>
                         </Circle>
                     </PhotoContainer>
                 </FlexWrapper>
@@ -53,6 +53,9 @@ export const Main = () => {
     );
 };
 
+const CircleText = styled.span`
+    height: fit-content;
+`
 const StyledBtn = styled.button`
     font-family: Next-art, sans-serif;
     border-radius: 6px;
