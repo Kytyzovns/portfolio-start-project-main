@@ -21,14 +21,14 @@ export const Skill = (props: SkillProps) => {
     if (props.isText === true) {
         return (
             <StyledSkill>
-                {/*<SkillTitle>{props.title}</SkillTitle>*/}
+                <SkillTitle>{props.title}</SkillTitle>
                 <SkillText>{props.text}</SkillText>
             </StyledSkill>
         );
     } else {
         return (
             <StyledSkill>
-                {/*<Icon iconId={id} width={props.iconWidth} height={props.iconHeight} viewBox={props.viewBox}/>*/}
+                <Icon iconId={id} width={props.iconWidth} height={props.iconHeight} viewBox={props.viewBox}/>
                 <SkillText>{props.text}</SkillText>
             </StyledSkill>
         );
@@ -41,16 +41,18 @@ export const StyledSkill = styled.div`
     height: 270px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.47);
     background: ${theme.colors.skillBg};
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 `
 
 export const SkillText = styled.span`
     display: inline-block;
-    position: absolute;
+    margin-bottom: 50px;
     bottom: 50px;
     left: 0;
     transform-origin: center;
-    transform: translateX(50%);
     font-weight: 300;
     font-size: 24px;
     color: #e4e4e4;
