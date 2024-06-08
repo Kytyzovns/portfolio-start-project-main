@@ -8,6 +8,6 @@ export const theme = {
         secondaryTextColor: "#FFFFFF",
         linkTextColor: "#E2A100",
         buttonTextColor: "#000000",
-
+        skillBg: "#2a2a2a"
     }
 }

@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 type FlexWrapperProps = {
-    direction?: string
-    justify?: string
-    align?: string
-    wrap?: string
-    width?: string
-    height?: string
-    gap?: string
+    direction?: string;
+    justify?: string;
+    align?: string;
+    wrap?: string;
+    width?: string;
+    height?: string;
+    gap?: string;
+    margin?: string;
 }
 
 export const FlexWrapper = styled.div<FlexWrapperProps>`
@@ -20,4 +21,6 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
     height: ${props => props.height || "100%"};
     gap: ${props => props.gap};
     //border: 1px solid yellow;
+    margin: ${props => props.margin || "0"};
+    
 `
