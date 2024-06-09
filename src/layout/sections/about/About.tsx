@@ -1,12 +1,10 @@
 import React from 'react';
 import {Icon} from "../../../components/Icon/Icon";
 import styled from "styled-components";
-import firstPhoto from "../../../assets/images/firstAboutPhoto.webp"
+import firstPhoto from "../../../assets/images/firstAboutPhoto1.webp"
 import secondPhoto from "../../../assets/images/secondAboutPhoto.webp"
 import thirdPhoto from "../../../assets/images/thirdAboutPhoto.webp"
-import aboutFirstHead from "../../../assets/images/aboutHead.webp"
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {StyledIcon} from "../../../components/Icon/StyledIcon";
 import {AbsoluteContainer} from "../../../components/AbsoluteContainer";
 
 export const About = () => {

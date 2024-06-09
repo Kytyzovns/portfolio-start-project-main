@@ -40,7 +40,7 @@ export const Skill = (props: SkillProps) => {
     }
 };
 
-export const StyledSkill = styled.div`
+const StyledSkill = styled.div`
     border-radius: 29px;
     width: 270px;
     height: 270px;
@@ -52,21 +52,19 @@ export const StyledSkill = styled.div`
     align-items: center;
 `
 
-export const SkillText = styled.span`
+const SkillText = styled.span`
     display: inline-block;
     margin-bottom: 50px;
-    bottom: 50px;
-    left: 0;
-    transform-origin: center;
     font-weight: 300;
     font-size: 24px;
-    color: #e4e4e4;
+    color: ${theme.colors.primaryTextColor};
 `
 
-export const SkillTitle = styled.h3`
+const SkillTitle = styled.h3`
+    font-family: Next-art, sans-serif;
     font-weight: 700;
     font-size: 48px;
-    color: #00c4f0;
+    color: ${theme.colors.accent};
 `
 
 
