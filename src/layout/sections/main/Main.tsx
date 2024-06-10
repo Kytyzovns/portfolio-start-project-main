@@ -8,6 +8,7 @@ import {Circle} from "./Circle";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {StyledIcon} from "../../../components/Icon/StyledIcon";
+import {StyledCircle} from "../../../components/StyledCircle";
 
 export const Main = () => {
     return (
@@ -110,13 +111,3 @@ const PhotoContainer = styled.div`
     justify-content: flex-end;
 `
 
-const StyledCircle = styled.div`
-    border: solid 67px ${theme.colors.accent};
-    left: -65px;
-    bottom: 0;
-    position: absolute;
-    width: 575px;
-    height: 575px;
-    border-radius: 100%;
-    box-shadow: 0 0 152px 0 rgba(0, 196, 240, 0.42);
-`
