@@ -10,6 +10,7 @@ import {AbsoluteContainer} from "../../../components/AbsoluteContainer";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {Skills} from "../skills/Skills";
+import {StyledCircle} from "../../../components/StyledCircle";
 
 export const About = () => {
     return (
@@ -32,6 +33,8 @@ export const About = () => {
 
                     <Head src={aboutHead} alt="aboutFirstHead"/>
 
+                    <StyledCircle borderWidth={"55px"} borderColor={"accent"} left={"-65px"} bottom={"-65px"} dims={"485px"}
+                                  shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledCircle>
 
                     <StyledAboutText>Hello again everyone! So, you already know that my name is Gleb. A little about
                         myself: student, 18 y.o., athlete-football player, I love creativity since childhood, I live
@@ -105,7 +108,7 @@ const StyledTextContainer = styled.div`
     width: 500px;
     height: 820px;
     background-color: ${theme.colors.skillBg};
-    z-index: 1;
+    z-index: 9999;
 `
 
 type StyledPhotoContainerProps = {
@@ -133,4 +136,7 @@ const Head = styled.img`
     left: -310px;
     top: -90px;
     z-index: 2;
+`
+const emptyContainer = styled.div`
+
 `

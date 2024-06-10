@@ -27,11 +27,9 @@ export const Main = () => {
                     </FlexWrapper>
 
                     <PhotoContainer>
-                        <StyledCircle></StyledCircle>
+                        <StyledCircle borderWidth={"67px"} borderColor={"accent"} left={"-65px"} bottom={"0"} dims={"575px"}
+                                      shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledCircle>
                         <Photo src={mainPhoto} alt="mainPhoto"/>
-
-                        <StyledCircle/>
-
                         <Circle top={"100px"} right={"22px"}>
                             <CircleText>UI</CircleText>
                         </Circle>
