@@ -83,11 +83,5 @@ export const GlobalStyles = createGlobalStyle`
         border: none;
     }
     
-    section:nth-of-type(odd) {
-        background-image: ${theme.colors.primaryBg};
-    }
-    section:nth-of-type(even) {
-        background-image: ${theme.colors.secondaryBg};
-    }
     
 `

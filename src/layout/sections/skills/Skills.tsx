@@ -3,11 +3,11 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
 import styled from "styled-components";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Skills = () => {
     return (
         <StyledSkills>
-            <Container>
                 <FlexWrapper wrap="wrap" justify={"center"} gap={"30px"}>
                     <Skill iconId={"pen"} text={"ProductDesign"} iconHeight={"108"} iconWidth={"107"}
                            viewBox={"0 0 107 108"}/>
@@ -18,15 +18,14 @@ export const Skills = () => {
                     <Skill iconId={"display"} text={"Frontend"}/>
                     <Skill iconId={"motion"} text={"Motion"}/>
                 </FlexWrapper>
-            </Container>
         </StyledSkills>
 
     );
 };
 
 export const StyledSkills = styled.section`
-    background-color: aquamarine;
     min-height: 40vh;
     padding: 110px 0 100px 0;
+    outline: solid crimson;
     //margin: 0 auto;
 `

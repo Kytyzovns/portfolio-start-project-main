@@ -89,6 +89,7 @@ const Description = styled.p`
     color: ${theme.colors.primaryTextColor};
 `
 const StyledMain = styled.section`
+    background: ${theme.colors.primaryBg};
     display: flex;
     max-height: 670px;
     margin-top: 74px;
@@ -104,7 +105,6 @@ const Photo = styled.img`
 const PhotoContainer = styled.div`
     position: relative;
     padding: 0;
-    border: thin solid yellow;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
