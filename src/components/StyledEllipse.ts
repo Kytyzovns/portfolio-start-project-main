@@ -14,7 +14,7 @@ type StyledCircleProps = {
 
 export const StyledEllipse = styled.div<StyledCircleProps>`
     border: solid ${props => props.borderWidth} ${props => `${props.theme.colors[props.borderColor || "blue"]}`};
-    left: ${props => props.left};
+    left: ${(props) => props.left};
     right: ${props => props.right};
     top: ${props => props.top};
     bottom: ${props => props.bottom};
@@ -26,4 +26,11 @@ export const StyledEllipse = styled.div<StyledCircleProps>`
     z-index: 0;
 `
 
+
+// const selectedUser = (user) => {
+//     return user.id
+// }
+// user => user.id
+//
+// props => props.left
 

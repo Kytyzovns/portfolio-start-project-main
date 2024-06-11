@@ -7,6 +7,7 @@ import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {StyledEllipse} from "../../../components/StyledEllipse";
 import {StyledBtn} from "../../../components/StyledBtn";
+import {Icon} from "../../../components/Icon/Icon";
 
 export const Main = () => {
     return (
@@ -25,8 +26,11 @@ export const Main = () => {
                     </FlexWrapper>
 
                     <PhotoContainer>
-                        <StyledEllipse borderWidth={"67px"} borderColor={"firstEllipseColor"} left={"-65px"} bottom={"0"} dims={"575px"}
-                                       shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledEllipse>
+                        <Icon iconId={"ellipse1"} width={"880px"} height={"880px"} viewBox={"0 0 880 880"}
+                              position={"absolute"} left={"-215px"} bottom={"-150px"} />
+                        {/*<StyledEllipse borderWidth={"67px"} borderColor={"firstEllipseColor"} left={"-65px"}*/}
+                        {/*               bottom={"0"} dims={"575px"}*/}
+                        {/*               shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledEllipse>*/}
                         <Photo src={mainPhoto} alt="mainPhoto"/>
                         <Circle top={"100px"} right={"22px"}>
                             <CircleText>UI</CircleText>
