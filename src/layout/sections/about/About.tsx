@@ -1,12 +1,9 @@
 import React from 'react';
-import {Icon} from "../../../components/Icon/Icon";
 import styled from "styled-components";
 import firstPhoto from "../../../assets/images/firstAboutPhoto.webp"
 import secondPhoto from "../../../assets/images/secondAboutPhoto.webp"
 import thirdPhoto from "../../../assets/images/thirdAboutPhoto.webp"
 import aboutHead from "../../../assets/images/image 2.png"
-import {FlexWrapper} from "../../../components/FlexWrapper";
-import {AbsoluteContainer} from "../../../components/AbsoluteContainer";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {Skills} from "../skills/Skills";
@@ -17,58 +14,60 @@ export const About = () => {
         <StyledAbout>
             <Container>
                 <Skills/>
-                <StyledTextContainer>
+                <EmptyContainer>
                     <StyledAboutTitle>ABOUT ME</StyledAboutTitle>
-                    <StyledPhotoContainer topPosition={"-45px"} leftPosition={"-290px"} zIndex={"1"}>
+                    <StyledPhotoContainer topPosition={"-45px"} leftPosition={"-290px"} zIndex={"2"}>
                         <StyledAboutPhoto src={firstPhoto} alt="firstPhoto"/>
                     </StyledPhotoContainer>
 
-                    <StyledPhotoContainer topPosition={"190px"} rightPosition={"-290px"} zIndex={"1"}>
+                    <StyledPhotoContainer topPosition={"190px"} rightPosition={"-290px"} zIndex={"2"}>
                         <StyledAboutPhoto src={secondPhoto} alt="secondPhoto"/>
                     </StyledPhotoContainer>
 
-                    <StyledPhotoContainer bottomPosition={"-45px"} leftPosition={"-270px"} zIndex={"1"}>
-                            <StyledAboutPhoto src={thirdPhoto} alt="thirdPhoto"/>
+                    <StyledPhotoContainer bottomPosition={"-45px"} leftPosition={"-270px"} zIndex={"2"}>
+                        <StyledAboutPhoto src={thirdPhoto} alt="thirdPhoto"/>
                     </StyledPhotoContainer>
 
                     <Head src={aboutHead} alt="aboutFirstHead"/>
 
-                    <StyledCircle borderWidth={"55px"} borderColor={"accent"} left={"-65px"} bottom={"-65px"} dims={"485px"}
+                    <StyledCircle borderWidth={"55px"} borderColor={"firstEllipseColor"} right={"-230px"}
+                                  bottom={"-110px"} dims={"485px"}
                                   shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledCircle>
+                    <StyledCircle borderWidth={"35px"} borderColor={"secondEllipseColor"} dims={"355px"}
+                                  shadow={"0 4px 70px 0 rgba(226, 162, 0, 0.25)"}
+                                  right={"-240px"} top={"-30px"}></StyledCircle>
 
-                    <StyledAboutText>Hello again everyone! So, you already know that my name is Gleb. A little about
-                        myself: student, 18 y.o., athlete-football player, I love creativity since childhood, I live
-                        in
-                        Donetsk, Ukraine. Why programming? Everything is elementary - I like it, the profession of
-                        the
-                        future, thanks to which I can provide myself and fulfill my dream - travel, at the moment I
-                        specialize in web design, front-end and back-end development, turnkey websites. Why should
-                        you
-                        choose me? I approach each order with great responsibility and love, as I want to make a
-                        name
-                        for myself, exclude plagiarism and negligence, fully study the project, the client and its
-                        target audience, work for quality, trying to make an order as quickly and uniquely as
-                        possible,
-                        taking into account all the edits and wishes.
-                        By trusting me, you will get the maximum return for your project, save your nerves and time.
-                        If you are interested in me , you want to know something more or use my services, then I
-                        will
-                        provide all my contacts below.
-                    </StyledAboutText>
-                </StyledTextContainer>
+                    <StyledCircle borderWidth={"90px"} borderColor={"thirdEllipseColor"} dims={"790px"}
+                                  shadow={"0 4px 70px 0 rgba(255, 255, 255, 0.25)"}
+                                  left={"-520px"} top={"-5px"}></StyledCircle>
+                    <StyledTextContainer>
+                        <StyledAboutText>Hello again everyone! So, you already know that my name is Gleb. A little about
+                            myself: student, 18 y.o., athlete-football player, I love creativity since childhood, I live
+                            in
+                            Donetsk, Ukraine. Why programming? Everything is elementary - I like it, the profession of
+                            the
+                            future, thanks to which I can provide myself and fulfill my dream - travel, at the moment I
+                            specialize in web design, front-end and back-end development, turnkey websites. Why should
+                            you
+                            choose me? I approach each order with great responsibility and love, as I want to make a
+                            name
+                            for myself, exclude plagiarism and negligence, fully study the project, the client and its
+                            target audience, work for quality, trying to make an order as quickly and uniquely as
+                            possible,
+                            taking into account all the edits and wishes.
+                            By trusting me, you will get the maximum return for your project, save your nerves and time.
+                            If you are interested in me , you want to know something more or use my services, then I
+                            will
+                            provide all my contacts below.
+                        </StyledAboutText>
+                    </StyledTextContainer>
+                </EmptyContainer>
 
 
             </Container>
         </StyledAbout>
     );
 };
-
-// const AboutContainer = styled.div`
-//     height: 100%;
-//     width: 100%;
-//     outline: 1px solid crimson;
-//     right: 0;
-// `
 
 const StyledAboutTitle = styled.h2`
     top: -25px;
@@ -78,6 +77,7 @@ const StyledAboutTitle = styled.h2`
     font-weight: 400;
     font-size: 48px;
     color: #e4e4e4;
+    z-index: 2;
 `
 
 const StyledAboutText = styled.p`
@@ -101,14 +101,14 @@ const StyledAboutPhoto = styled.img`
 `
 
 const StyledTextContainer = styled.div`
-    position: relative;
-    margin-left: 440px;
-    margin-top: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
     border-radius: 15px;
     width: 500px;
     height: 820px;
     background-color: ${theme.colors.skillBg};
-    z-index: 9999;
+    z-index: 1;
 `
 
 type StyledPhotoContainerProps = {
@@ -137,6 +137,11 @@ const Head = styled.img`
     top: -90px;
     z-index: 2;
 `
-const emptyContainer = styled.div`
-
+const EmptyContainer = styled.div`
+    position: relative;
+    margin-left: 440px;
+    margin-top: 80px;
+    border-radius: 15px;
+    width: 500px;
+    height: 820px;
 `

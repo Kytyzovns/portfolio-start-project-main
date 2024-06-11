@@ -3,7 +3,7 @@ import {theme} from "../styles/Theme";
 
 type StyledCircleProps = {
     borderWidth?: string;
-    borderColor?: string;
+    borderColor?: "firstEllipseColor" | "secondEllipseColor" | "thirdEllipseColor";
     left?: string;
     right?: string;
     top?: string;
@@ -23,7 +23,7 @@ export const StyledCircle = styled.div<StyledCircleProps>`
     height: ${props => props.dims};
     border-radius: 100%;
     box-shadow: ${props => props.shadow};
-    z-index: -1;
+    z-index: 0;
 `
 
 

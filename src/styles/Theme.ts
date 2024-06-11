@@ -8,6 +8,10 @@ export const theme = {
         secondaryTextColor: "#FFFFFF",
         linkTextColor: "#E2A100",
         buttonTextColor: "#000000",
-        skillBg: "#2a2a2a"
+        skillBg: "#2a2a2a",
+
+        firstEllipseColor: "#00C4F0",
+        secondEllipseColor: "#e2a200",
+        thirdEllipseColor: "#e4e4e4"
     }
 }
