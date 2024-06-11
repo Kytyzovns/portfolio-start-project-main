@@ -7,7 +7,9 @@ import {theme} from "../../../../styles/Theme";
 export const PortfolioSlide = () => {
     return (
         <SlideContainer align={"center"} justify={"space-around"}>
-            <StyledSlideImage src={slideImage}/>
+            <ImageContainer>
+                <StyledSlideImage src={slideImage}/>
+            </ImageContainer>
             <FlexWrapper direction={"column"} justify="center" align={"center"} width={"295px"} height={"435px"}>
                 <StyledSlideTitle>Landing Ice-cream</StyledSlideTitle>
                 <StyledSlideText>
@@ -24,10 +26,35 @@ export const PortfolioSlide = () => {
     );
 };
 
+const ImageContainer = styled.div`
+position: relative;
+    
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        backdrop-filter: blur(4px);
+        z-index: 9999;
+        border-radius: 30px;
+        opacity: 0;
+    }
+    
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+    }
+`
+
 const StyledSlideImage = styled.img`
     width: 495px;
     height: 500px;
     border-radius: 30px;
+    display: block;
 `
 
 const StyledSlideTitle = styled.h3`
