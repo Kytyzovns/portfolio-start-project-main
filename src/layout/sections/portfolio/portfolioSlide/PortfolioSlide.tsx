@@ -3,14 +3,16 @@ import {FlexWrapper} from "../../../../components/FlexWrapper";
 import styled from "styled-components";
 import slideImage from "../../../../assets/images/portfolioImage.webp"
 import {theme} from "../../../../styles/Theme";
+import {StyledBtn} from "../../../../components/StyledBtn";
 
 export const PortfolioSlide = () => {
     return (
         <SlideContainer align={"center"} justify={"space-around"}>
             <ImageContainer>
+                <StyledBtn>View project</StyledBtn>
                 <StyledSlideImage src={slideImage}/>
             </ImageContainer>
-            <FlexWrapper direction={"column"} justify="center" align={"center"} width={"295px"} height={"435px"}>
+            <FlexWrapper direction={"column"} justify="center" align={"center"} width={"295px"} height={"435px"} gap={"25px"}>
                 <StyledSlideTitle>Landing Ice-cream</StyledSlideTitle>
                 <StyledSlideText>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut orci eu elit consequat posuere ut
@@ -27,8 +29,17 @@ export const PortfolioSlide = () => {
 };
 
 const ImageContainer = styled.div`
-position: relative;
-    
+    position: relative;
+
+    button {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        opacity: 0;
+    }
+
     &::before {
         content: "";
         display: inline-block;
@@ -38,13 +49,17 @@ position: relative;
         right: 0;
         bottom: 0;
         backdrop-filter: blur(4px);
-        z-index: 9999;
+        z-index: 5;
         border-radius: 30px;
         opacity: 0;
     }
-    
+
     &:hover {
         &::before {
+            opacity: 1;
+        }
+
+        button {
             opacity: 1;
         }
     }

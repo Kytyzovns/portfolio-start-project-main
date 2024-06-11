@@ -6,6 +6,7 @@ import {Circle} from "./Circle";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {StyledCircle} from "../../../components/StyledCircle";
+import {StyledBtn} from "../../../components/StyledBtn";
 
 export const Main = () => {
     return (
@@ -52,17 +53,7 @@ export const Main = () => {
 const CircleText = styled.span`
     height: fit-content;
 `
-const StyledBtn = styled.button`
-    font-family: Next-art, sans-serif;
-    border-radius: 6px;
-    width: 200px;
-    height: 47px;
-    box-shadow: 0 2px 13px 0 rgba(226, 158, 0, 0.48);
-    background: linear-gradient(315deg, #e2a300 0%, #e29500 100%);
-    font-weight: 900;
-    font-size: 18px;
-    color: ${theme.colors.buttonTextColor};
-`
+
 const Greeting = styled.h2`
     font-family: Next-art, sans-serif;
     font-weight: 600;

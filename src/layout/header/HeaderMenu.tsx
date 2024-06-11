@@ -82,15 +82,18 @@ const Item = styled.li`
     }
 
     &:hover {
+        
         &::before {
             transform: scale(1);
         }
 
         ${Mask} {
+            transition: 0.1s;
             transform: skewX(12deg) translateX(5px);
         }
 
         ${Mask} + ${Mask} {
+            transition: 0.1s;
             transform: skewX(12deg) translateX(-5px);
         }
     }
