@@ -17,7 +17,7 @@ export const ArrowBtn = (props: ArrowBtnProps) => {
 };
 
 const StyledBtn = styled.button`
-background-color: transparent;
+    background-color: transparent;
     cursor: pointer;
     border: none;
 `

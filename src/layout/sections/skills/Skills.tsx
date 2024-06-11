@@ -2,8 +2,6 @@ import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
 import styled from "styled-components";
-import {Container} from "../../../components/Container";
-import {theme} from "../../../styles/Theme";
 
 export const Skills = () => {
     return (
@@ -26,5 +24,4 @@ export const Skills = () => {
 export const StyledSkills = styled.section`
     min-height: 40vh;
     padding: 110px 0 100px 0;
-    //margin: 0 auto;
 `

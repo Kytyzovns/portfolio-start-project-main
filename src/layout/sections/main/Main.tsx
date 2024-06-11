@@ -2,12 +2,9 @@ import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import mainPhoto from "../../../assets/images/mainPhoto.webp"
 import styled from "styled-components";
-
-import {Icon} from "../../../components/Icon/Icon";
 import {Circle} from "./Circle";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
-import {StyledIcon} from "../../../components/Icon/StyledIcon";
 import {StyledCircle} from "../../../components/StyledCircle";
 
 export const Main = () => {

@@ -76,7 +76,7 @@ const StyledAboutTitle = styled.h2`
     font-family: Next-art, sans-serif;
     font-weight: 400;
     font-size: 48px;
-    color: #e4e4e4;
+    color: ${theme.colors.primaryTextColor};
     z-index: 2;
 `
 
@@ -84,7 +84,7 @@ const StyledAboutText = styled.p`
     font-weight: 200;
     font-size: 20px;
     letter-spacing: 0.01em;
-    color: #fff;
+    color: ${theme.colors.secondaryTextColor};
     box-sizing: border-box;
     padding: 63px;
 `
@@ -127,7 +127,7 @@ const StyledPhotoContainer = styled.div<StyledPhotoContainerProps>`
     z-index: ${props => props.zIndex};
     border-radius: 15px;
     padding: 15px;
-    background-color: #2c2c2c;
+    background-color: ${theme.colors.skillBg};
     position: absolute;
 `
 
