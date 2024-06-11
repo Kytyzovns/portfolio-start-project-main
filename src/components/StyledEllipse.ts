@@ -12,7 +12,7 @@ type StyledCircleProps = {
     shadow?: string;
 }
 
-export const StyledCircle = styled.div<StyledCircleProps>`
+export const StyledEllipse = styled.div<StyledCircleProps>`
     border: solid ${props => props.borderWidth} ${props => `${props.theme.colors[props.borderColor || "blue"]}`};
     left: ${props => props.left};
     right: ${props => props.right};

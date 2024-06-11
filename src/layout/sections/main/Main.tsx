@@ -5,7 +5,7 @@ import styled from "styled-components";
 import {Circle} from "./Circle";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
-import {StyledCircle} from "../../../components/StyledCircle";
+import {StyledEllipse} from "../../../components/StyledEllipse";
 import {StyledBtn} from "../../../components/StyledBtn";
 
 export const Main = () => {
@@ -25,8 +25,8 @@ export const Main = () => {
                     </FlexWrapper>
 
                     <PhotoContainer>
-                        <StyledCircle borderWidth={"67px"} borderColor={"firstEllipseColor"} left={"-65px"} bottom={"0"} dims={"575px"}
-                                      shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledCircle>
+                        <StyledEllipse borderWidth={"67px"} borderColor={"firstEllipseColor"} left={"-65px"} bottom={"0"} dims={"575px"}
+                                       shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledEllipse>
                         <Photo src={mainPhoto} alt="mainPhoto"/>
                         <Circle top={"100px"} right={"22px"}>
                             <CircleText>UI</CircleText>
@@ -80,7 +80,7 @@ const StyledMain = styled.section`
     display: flex;
     max-height: 670px;
     margin-top: 74px;
-    overflow: hidden;
+    //overflow: hidden;
 `
 
 const Photo = styled.img`

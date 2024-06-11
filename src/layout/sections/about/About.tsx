@@ -7,7 +7,7 @@ import aboutHead from "../../../assets/images/image 2.png"
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {Skills} from "../skills/Skills";
-import {StyledCircle} from "../../../components/StyledCircle";
+import {StyledEllipse} from "../../../components/StyledEllipse";
 
 export const About = () => {
     return (
@@ -30,16 +30,16 @@ export const About = () => {
 
                     <Head src={aboutHead} alt="aboutFirstHead"/>
 
-                    <StyledCircle borderWidth={"55px"} borderColor={"firstEllipseColor"} right={"-230px"}
-                                  bottom={"-110px"} dims={"485px"}
-                                  shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledCircle>
-                    <StyledCircle borderWidth={"35px"} borderColor={"secondEllipseColor"} dims={"355px"}
-                                  shadow={"0 4px 70px 0 rgba(226, 162, 0, 0.25)"}
-                                  right={"-240px"} top={"-30px"}></StyledCircle>
+                    <StyledEllipse borderWidth={"55px"} borderColor={"firstEllipseColor"} right={"-230px"}
+                                   bottom={"-110px"} dims={"485px"}
+                                   shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledEllipse>
+                    <StyledEllipse borderWidth={"35px"} borderColor={"secondEllipseColor"} dims={"355px"}
+                                   shadow={"0 4px 70px 0 rgba(226, 162, 0, 0.25)"}
+                                   right={"-240px"} top={"-30px"}></StyledEllipse>
 
-                    <StyledCircle borderWidth={"90px"} borderColor={"thirdEllipseColor"} dims={"790px"}
-                                  shadow={"0 4px 70px 0 rgba(255, 255, 255, 0.25)"}
-                                  left={"-520px"} top={"-5px"}></StyledCircle>
+                    <StyledEllipse borderWidth={"90px"} borderColor={"thirdEllipseColor"} dims={"790px"}
+                                   shadow={"0 4px 70px 0 rgba(255, 255, 255, 0.25)"}
+                                   left={"-520px"} top={"-5px"}></StyledEllipse>
                     <StyledTextContainer>
                         <StyledAboutText>Hello again everyone! So, you already know that my name is Gleb. A little about
                             myself: student, 18 y.o., athlete-football player, I love creativity since childhood, I live

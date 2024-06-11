@@ -1,17 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 type MenuProps = {
     direction: "column" | "row";
     gap: string;
-    weight?: string;
-    fontSize?: string;
-    fontColor?: string;
 }
 
 export const Menu = (props: MenuProps) => {
     return (
-        <StyledNav direction={props.direction} gap={props.gap} fontSize={props.fontSize} fontColor={props.fontColor} weight={props.weight}>
+        <StyledNav direction={props.direction} gap={props.gap}>
             <ul>
                 <li>
                     <a href="">Home</a>
@@ -40,9 +38,9 @@ const StyledNav = styled.nav<MenuProps>`
         flex-direction: ${props => props.direction};
         gap: ${props => props.gap};
         list-style: none;
-        font-size: ${props => props.weight};
-        font-size: ${props => props.fontSize};
-        color: ${props => props.fontColor};
+        font-size: 18px;
+        font-weight: 300;
+        // color: ${theme.colors.primaryTextColor};
     }
 `
 

@@ -34,7 +34,7 @@ const StyledHeader = styled.header`
     z-index: 99999999;
 `
 
-const StyledLogoText = styled.span`
+export const StyledLogoText = styled.span`
     font-family: "Nico-moji", sans-serif;
     font-weight: 400;
     font-size: 18px;

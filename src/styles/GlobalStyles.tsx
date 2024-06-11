@@ -61,7 +61,7 @@ export const GlobalStyles = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        color: ${theme.colors.primaryTextColor}
+        color: ${theme.colors.primaryTextColor};
         line-height: 1.2;
     }
 
@@ -72,8 +72,11 @@ export const GlobalStyles = createGlobalStyle`
 
     a {
         text-decoration: none;
+        &:visited {
+            color: ${theme.colors.primaryTextColor};
+        }
     }
-    
+
     ul {
         list-style: none;
     }

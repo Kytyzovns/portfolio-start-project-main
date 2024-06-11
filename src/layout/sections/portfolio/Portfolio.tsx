@@ -4,18 +4,21 @@ import styled from "styled-components";
 import {PortfolioSlide} from "./portfolioSlide/PortfolioSlide";
 import {ArrowBtn} from "../../../components/arrowButton/ArrowBtn";
 import {theme} from "../../../styles/Theme";
+import {Container} from "../../../components/Container";
 
 export const Portfolio = () => {
     return (
         <StyledPortfolio>
-            <FlexWrapper direction={"column"} justify={"center"} align={"center"}>
-                <StyledPortfolioTitle>Portfolio</StyledPortfolioTitle>
-                <FlexWrapper gap={"40px"}>
-                    <ArrowBtn direction={"left"}/>
-                    <PortfolioSlide/>
-                    <ArrowBtn direction={"right"}/>
+            <Container>
+                <FlexWrapper direction={"column"} justify={"center"} align={"center"}>
+                    <StyledPortfolioTitle>Portfolio</StyledPortfolioTitle>
+                    <FlexWrapper gap={"40px"}>
+                        <ArrowBtn direction={"left"}/>
+                        <PortfolioSlide/>
+                        <ArrowBtn direction={"right"}/>
+                    </FlexWrapper>
                 </FlexWrapper>
-            </FlexWrapper>
+            </Container>
         </StyledPortfolio>
     );
 };
