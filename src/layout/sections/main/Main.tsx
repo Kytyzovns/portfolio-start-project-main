@@ -8,6 +8,7 @@ import {theme} from "../../../styles/Theme";
 import {StyledEllipse} from "../../../components/StyledEllipse";
 import {StyledBtn} from "../../../components/StyledBtn";
 import {Icon} from "../../../components/Icon/Icon";
+import firstEllipse from "../../../assets/images/oldsvg/Ellipse 1.png";
 
 export const Main = () => {
     return (
@@ -26,8 +27,9 @@ export const Main = () => {
                     </FlexWrapper>
 
                     <PhotoContainer>
-                        <Icon iconId={"ellipse1"} width={"880px"} height={"880px"} viewBox={"0 0 880 880"}
-                              position={"absolute"} left={"-215px"} bottom={"-150px"} />
+                        {/*<MainEllipse src={firstEllipse}/>*/}
+                        {/*<Icon iconId={"ellipse1"} width={"880px"} height={"880px"} viewBox={"0 0 880 880"}*/}
+                        {/*      position={"absolute"} left={"-215px"} bottom={"-150px"} />*/}
                         {/*<StyledEllipse borderWidth={"67px"} borderColor={"firstEllipseColor"} left={"-65px"}*/}
                         {/*               bottom={"0"} dims={"575px"}*/}
                         {/*               shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledEllipse>*/}
@@ -99,5 +101,31 @@ const PhotoContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    
+    &::before {
+        content: url('${firstEllipse}');
+        //background-image: url("../../../assets/images/oldsvg/Ellipse 1.png");
+        //background-size: cover;
+        //background-repeat: no-repeat;
+        //background-position: center;
+        
+        width: fit-content;
+        height: fit-content;
+        
+        display: inline-block;
+        
+        position: absolute;
+        z-index: 2;
+        
+        left: 0;
+        bottom: 0;
+    }
+`
+const MainEllipse = styled.img`
+    display: block;
+    position: absolute;
+    bottom: -150px;
+    left: -215px;
+    
 `
 
