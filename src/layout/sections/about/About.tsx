@@ -8,6 +8,7 @@ import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {Skills} from "../skills/Skills";
 import {StyledEllipse} from "../../../components/StyledEllipse";
+import firstEllipse from "../../../assets/images/oldsvg/Ellipse 8.png"
 
 export const About = () => {
     return (
@@ -33,9 +34,9 @@ export const About = () => {
                     <StyledEllipse borderWidth={"55px"} borderColor={"firstEllipseColor"} right={"-230px"}
                                    bottom={"-110px"} dims={"485px"}
                                    shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledEllipse>
-                    <StyledEllipse borderWidth={"35px"} borderColor={"secondEllipseColor"} dims={"355px"}
-                                   shadow={"0 4px 70px 0 rgba(226, 162, 0, 0.25)"}
-                                   right={"-240px"} top={"-30px"}></StyledEllipse>
+                    {/*<StyledEllipse borderWidth={"35px"} borderColor={"secondEllipseColor"} dims={"355px"}*/}
+                    {/*               shadow={"0 4px 70px 0 rgba(226, 162, 0, 0.25)"}*/}
+                    {/*               right={"-240px"} top={"-30px"}></StyledEllipse>*/}
 
                     <StyledEllipse borderWidth={"90px"} borderColor={"thirdEllipseColor"} dims={"790px"}
                                    shadow={"0 4px 70px 0 rgba(255, 255, 255, 0.25)"}
@@ -109,6 +110,22 @@ const StyledTextContainer = styled.div`
     height: 820px;
     background-color: ${theme.colors.skillBg};
     z-index: 1;
+    
+    &::before {
+        content: url('${firstEllipse}');
+        margin: 0;
+
+        width: fit-content;
+        height: fit-content;
+
+        display: inline-block;
+
+        position: absolute;
+        z-index: -1;
+
+        right: -312px;
+        top: -102px;
+    }
 `
 
 type StyledPhotoContainerProps = {
@@ -144,4 +161,5 @@ const EmptyContainer = styled.div`
     border-radius: 15px;
     width: 500px;
     height: 820px;
+    background: ${theme.colors.skillBg};
 `

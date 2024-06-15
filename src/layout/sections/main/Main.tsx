@@ -101,21 +101,18 @@ const PhotoContainer = styled.div`
     
     &::before {
         content: url('${firstEllipse}');
-        //background-image: url("../../../assets/images/oldsvg/Ellipse 1.png");
-        //background-size: cover;
-        //background-repeat: no-repeat;
-        //background-position: center;
-        
+        margin: 0;
+       
         width: fit-content;
         height: fit-content;
         
         display: inline-block;
         
         position: absolute;
-        z-index: 2;
+        z-index: 0;
         
-        left: 0;
-        bottom: 0;
+        left: -220px;
+        bottom: -152px;
     }
 `
 const MainEllipse = styled.img`
