@@ -37,7 +37,7 @@ export const About = () => {
                     {/*<StyledEllipse borderWidth={"35px"} borderColor={"secondEllipseColor"} dims={"355px"}*/}
                     {/*               shadow={"0 4px 70px 0 rgba(226, 162, 0, 0.25)"}*/}
                     {/*               right={"-240px"} top={"-30px"}></StyledEllipse>*/}
-
+                    {/*   comment*/}
                     <StyledEllipse borderWidth={"90px"} borderColor={"thirdEllipseColor"} dims={"790px"}
                                    shadow={"0 4px 70px 0 rgba(255, 255, 255, 0.25)"}
                                    left={"-520px"} top={"-5px"}></StyledEllipse>
