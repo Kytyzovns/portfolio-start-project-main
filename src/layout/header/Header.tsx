@@ -10,8 +10,9 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 
 export const Header = () => {
     return (
-        <Container>
-            <StyledHeader>
+
+        <StyledHeader>
+            <Container>
                 <FlexWrapper justify={"space-around"} align={"center"} max-width={"1100px"}>
                     <FlexWrapper justify={"center"} align={"center"} gap={"10px"}>
                         <Logo iconId="logo" width="65px" height="48px" viewBox="0 0 65 48"/>
@@ -19,19 +20,20 @@ export const Header = () => {
                     </FlexWrapper>
                     <HeaderMenu items={["Home", "About me", "Portfolio", "Contact"]}/>
                 </FlexWrapper>
-            </StyledHeader>
-        </Container>
+            </Container>
+        </StyledHeader>
+
     );
 };
 
 const StyledHeader = styled.header`
     background-image: ${theme.colors.primaryBg};
-    padding-top: 26px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99999999;
+    opacity: 70%;
 `
 
 export const StyledLogoText = styled.span`

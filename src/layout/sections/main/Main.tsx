@@ -5,9 +5,7 @@ import styled from "styled-components";
 import {Circle} from "./Circle";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
-import {StyledEllipse} from "../../../components/StyledEllipse";
 import {StyledBtn} from "../../../components/StyledBtn";
-import {Icon} from "../../../components/Icon/Icon";
 import firstEllipse from "../../../assets/images/oldsvg/Ellipse 1.png";
 
 export const Main = () => {
@@ -78,8 +76,7 @@ const Description = styled.p`
 const StyledMain = styled.section`
     background: ${theme.colors.primaryBg};
     display: flex;
-    max-height: 670px;
-    margin-top: 74px;
+    padding-top: 74px;
     //overflow: hidden;
 `
 
