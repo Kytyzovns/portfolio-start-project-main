@@ -7,8 +7,10 @@ import aboutHead from "../../../assets/images/image 2.png"
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {Skills} from "../skills/Skills";
-import {StyledEllipse} from "../../../components/StyledEllipse";
 import firstEllipse from "../../../assets/images/oldsvg/Ellipse 8.png"
+import secondEllipse from "../../../assets/images/oldsvg/Ellipse 6.png"
+import thirdEllipse from "../../../assets/images/oldsvg/Ellipse 7.png"
+
 
 export const About = () => {
     return (
@@ -31,16 +33,6 @@ export const About = () => {
 
                     <Head src={aboutHead} alt="aboutFirstHead"/>
 
-                    <StyledEllipse borderWidth={"55px"} borderColor={"firstEllipseColor"} right={"-230px"}
-                                   bottom={"-110px"} dims={"485px"}
-                                   shadow={"0 0 152px 0 rgba(0, 196, 240, 0.42)"}></StyledEllipse>
-                    {/*<StyledEllipse borderWidth={"35px"} borderColor={"secondEllipseColor"} dims={"355px"}*/}
-                    {/*               shadow={"0 4px 70px 0 rgba(226, 162, 0, 0.25)"}*/}
-                    {/*               right={"-240px"} top={"-30px"}></StyledEllipse>*/}
-                    {/*   comment*/}
-                    <StyledEllipse borderWidth={"90px"} borderColor={"thirdEllipseColor"} dims={"790px"}
-                                   shadow={"0 4px 70px 0 rgba(255, 255, 255, 0.25)"}
-                                   left={"-520px"} top={"-5px"}></StyledEllipse>
                     <StyledTextContainer>
                         <StyledAboutText>Hello again everyone! So, you already know that my name is Gleb. A little about
                             myself: student, 18 y.o., athlete-football player, I love creativity since childhood, I live
@@ -79,6 +71,7 @@ const StyledAboutTitle = styled.h2`
     font-size: 48px;
     color: ${theme.colors.primaryTextColor};
     z-index: 2;
+    
 `
 
 const StyledAboutText = styled.p`
@@ -91,9 +84,26 @@ const StyledAboutText = styled.p`
 `
 
 const StyledAbout = styled.section`
+    position: relative;
     background: ${theme.colors.secondaryBg};
     min-height: 120vh;
     padding-bottom: 150px;
+    z-index: 0;
+    &::before {
+        content: url('${thirdEllipse}');
+        margin: 0;
+
+        width: fit-content;
+        height: fit-content;
+
+        display: block;
+
+        position: absolute;
+        z-index: 1;
+
+        right: 46px;
+        bottom: -40px;
+    }
 `
 
 
@@ -108,24 +118,9 @@ const StyledTextContainer = styled.div`
     border-radius: 15px;
     width: 500px;
     height: 820px;
-    background-color: ${theme.colors.skillBg};
+    background: ${theme.colors.skillBg};
     z-index: 1;
     
-    &::before {
-        content: url('${firstEllipse}');
-        margin: 0;
-
-        width: fit-content;
-        height: fit-content;
-
-        display: inline-block;
-
-        position: absolute;
-        z-index: -1;
-
-        right: -312px;
-        top: -102px;
-    }
 `
 
 type StyledPhotoContainerProps = {
@@ -161,5 +156,38 @@ const EmptyContainer = styled.div`
     border-radius: 15px;
     width: 500px;
     height: 820px;
-    background: ${theme.colors.skillBg};
+    // background: ${theme.colors.skillBg};
+    z-index: 1;
+    &::before {
+        content: url('${firstEllipse}');
+        margin: 0;
+
+        width: fit-content;
+        height: fit-content;
+
+        display: inline-block;
+
+        position: absolute;
+        z-index: 1;
+
+        right: -312px;
+        top: -102px;
+    }
+
+    &::after {
+        content: url('${secondEllipse}');
+        margin: 0;
+
+        width: fit-content;
+        height: fit-content;
+
+        display: inline-block;
+
+        position: absolute;
+        z-index: 0;
+
+        left: -590px;
+        top: -65px;
+    }
+    
 `
