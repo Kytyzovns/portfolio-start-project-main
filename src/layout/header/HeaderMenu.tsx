@@ -8,7 +8,7 @@ type MenuProps = {
 
 export const HeaderMenu = (props: MenuProps) => {
     return (
-        <StyledNav>
+        <StyledMenu>
             <ul>
                 {props.items.map((item, index) => {
                     return (
@@ -26,22 +26,30 @@ export const HeaderMenu = (props: MenuProps) => {
                     );
                 })}
             </ul>
-        </StyledNav>
+        </StyledMenu>
     );
 };
 
 
-const StyledNav = styled.nav`
+const StyledMenu = styled.nav`
     display: flex;
     align-items: center;
     min-height: 100%;
+    max-width: 710px;
+    width: 100%;
+
     ul {
         display: flex;
         list-style: none;
-        gap:145px;
-        justify-content: center;
+        justify-content: space-between;
         min-height: 100%;
+        width: 100%;
     }
+
+    @media ${theme.media.tablet} {
+        display: none;
+    }
+    
 `
 
 const Mask = styled.span`

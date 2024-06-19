@@ -6,6 +6,7 @@ import {HeaderMenu} from "./HeaderMenu";
 import {theme} from "../../styles/Theme";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {MobileMenu} from "./mobileMenu/MobileMenu";
 
 
 export const Header = () => {
@@ -13,13 +14,14 @@ export const Header = () => {
 
         <StyledHeader>
             <Container>
-                <FlexWrapper justify={"space-around"} align={"center"} max-width={"1100px"}>
+                <HeaderFlexWrapper justify={"space-around"} align={"center"} max-width={"1100px"} gap={"50px"}>
                     <FlexWrapper justify={"center"} align={"center"} gap={"10px"}>
                         <Logo iconId="logo" width="65px" height="48px" viewBox="0 0 65 48"/>
                         <StyledLogoText>Notitanic</StyledLogoText>
                     </FlexWrapper>
                     <HeaderMenu items={["Home", "About me", "Portfolio", "Contact"]}/>
-                </FlexWrapper>
+                    <MobileMenu items={["Home", "About me", "Portfolio", "Contact"]}/>
+                </HeaderFlexWrapper>
             </Container>
         </StyledHeader>
 
@@ -27,13 +29,12 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-    background-image: ${theme.colors.primaryBg};
+    background-image: ${theme.colors.primaryTransparent};
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 99999999;
-    opacity: 70%;
+    z-index: 999999;
 `
 
 export const StyledLogoText = styled.span`
@@ -41,4 +42,12 @@ export const StyledLogoText = styled.span`
     font-weight: 400;
     font-size: 18px;
     color: ${theme.colors.secondaryTextColor};
+`
+
+const HeaderFlexWrapper = styled(FlexWrapper)`
+    
+    @media ${theme.media.tablet} {
+        
+        justify-content: flex-start;
+    }
 `
