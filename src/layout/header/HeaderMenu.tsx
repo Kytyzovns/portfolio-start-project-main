@@ -32,6 +32,7 @@ export const HeaderMenu = (props: MenuProps) => {
 
 
 const StyledMenu = styled.nav`
+    margin-top: 5px;
     display: flex;
     align-items: center;
     min-height: 100%;
@@ -63,7 +64,7 @@ const Mask = styled.span`
     & + & {
         top: 50%;
         span{
-            display: inline-block;
+            display: block;
             transform: translateY(-50%);
         }
     }
