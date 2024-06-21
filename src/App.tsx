@@ -12,9 +12,9 @@ function App() {
         <div className="App">
                 <Header/>
                 <Main/>
-                <About/>
-                <Portfolio/>
-                <Footer/>
+                {/*<About/>*/}
+                {/*<Portfolio/>*/}
+                {/*<Footer/>*/}
         </div>
     );
 }

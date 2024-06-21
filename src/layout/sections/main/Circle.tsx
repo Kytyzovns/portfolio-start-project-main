@@ -6,10 +6,12 @@ type CircleProps = {
     left?: string;
     right?: string;
     bottom?: string;
+    dims?: string;
+    fontSize?: string;
 }
 export const Circle = styled.div<CircleProps>`
-    width: 90px;
-    height: 90px;
+    width: ${props => props.dims || "90px"};
+    height: ${props => props.dims || "90px"};
     border-radius: 100%;
     background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
     display: flex;
@@ -24,14 +26,14 @@ export const Circle = styled.div<CircleProps>`
     span {
         font-family: Next-art, sans-serif;
         font-weight: 700;
-        font-size: 36px;
+        font-size: ${props => props.fontSize || "36px"};
         color: ${theme.colors.accent};  
     }
     
     p {
         vertical-align: middle;
         font-weight: 700;
-        font-size: 36px;
+        font-size: ${props => props.fontSize || "36px"};
         color: ${theme.colors.accent};
     }
 `

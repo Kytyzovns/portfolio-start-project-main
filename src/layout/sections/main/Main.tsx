@@ -2,18 +2,19 @@ import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import mainPhoto from "../../../assets/images/mainPhoto.webp"
 import styled from "styled-components";
-import {Circle} from "./Circle";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {StyledBtn} from "../../../components/StyledBtn";
 import firstEllipse from "../../../assets/images/oldsvg/Ellipse 1.png";
 import {font} from "../../../styles/Common";
+import {MainSkills} from "./MainSkills";
+import {MobileMainSkills} from "./MobileMainSkills";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"} gap={"120px"}>
+                <MainFlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"} direction={"row"}>
                     <FlexWrapper gap={"27px"} direction={"column"} justify={"flex-start"} height={"content"}>
                         <Greeting>HELLO</Greeting>
                         <Name>I’m Gleb</Name>
@@ -27,32 +28,20 @@ export const Main = () => {
 
                     <PhotoContainer>
                         <Photo src={mainPhoto} alt="mainPhoto"/>
-                        <Circle top={"100px"} right={"22px"}>
-                            <CircleText>UI</CircleText>
-                        </Circle>
-
-                        <Circle left={"-45px"} top={"130px"}>
-                            <span>{"</"}</span>
-                        </Circle>
-
-                        <Circle left={"-120px"} top={"300px"}>
-                            <span>UX</span>
-                        </Circle>
-
-                        <Circle left={"-90px"} bottom={"100px"}>
-                            <span>PS</span>
-                        </Circle>
+                        <MainSkills/>
+                        <MobileMainSkills/>
                     </PhotoContainer>
-                </FlexWrapper>
+                </MainFlexWrapper>
             </Container>
         </StyledMain>
     );
 };
 
-const CircleText = styled.span`
-    height: fit-content;
+const MainFlexWrapper = styled(FlexWrapper)`
+    // @media ${theme.media.mainFlex} {
+    //     ${props => props.direction = "column"};
+    // }
 `
-
 const Greeting = styled.h2`
     ${font({fontFamily:"Next-art, sans-serif", fontWeight: 600, Fmin: 27, Fmax: 48})};
     color: ${theme.colors.primaryTextColor};
@@ -74,7 +63,7 @@ const StyledMain = styled.section`
     background: ${theme.colors.primaryBg};
     display: flex;
     padding-top: 74px;
-    //overflow: hidden;
+    overflow: hidden;
 `
 
 const Photo = styled.img`
@@ -113,8 +102,10 @@ const PhotoContainer = styled.div`
         bottom: -152px;
         
         @media ${theme.media.tablet} {
-            width: 514px;
-            height: 514px;
+            width: 480px;
+            height: 480px;
+            left: -116px;
+            bottom: -90px;
         }
     }
 `
