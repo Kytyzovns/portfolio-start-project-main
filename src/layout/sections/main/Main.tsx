@@ -7,16 +7,17 @@ import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {StyledBtn} from "../../../components/StyledBtn";
 import firstEllipse from "../../../assets/images/oldsvg/Ellipse 1.png";
+import {font} from "../../../styles/Common";
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper justify={"space-between"} align={"center"}>
+                <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"} gap={"120px"}>
                     <FlexWrapper gap={"27px"} direction={"column"} justify={"flex-start"} height={"content"}>
                         <Greeting>HELLO</Greeting>
-                        <Name>I'M MYKYTA</Name>
-                        <Name>KUTUZOV</Name>
+                        <Name>I’m Gleb</Name>
+                        <Name>Kostrubov</Name>
                         <Description>I've been doing web design, front-end and back-end development for a year now.
                             Do you need a website design, site layout, or maybe a turnkey website?
                             Then contact me
@@ -53,16 +54,12 @@ const CircleText = styled.span`
 `
 
 const Greeting = styled.h2`
-    font-family: Next-art, sans-serif;
-    font-weight: 600;
-    font-size: 48px;
+    ${font({fontFamily:"Next-art, sans-serif", fontWeight: 600, Fmin: 27, Fmax: 48})};
     color: ${theme.colors.primaryTextColor};
 `
 
 const Name = styled.h2`
-    font-family: Next-art, sans-serif;
-    font-weight: 700;
-    font-size: 72px;
+    ${font({fontFamily:"Next-art, sans-serif", fontWeight: 700, Fmin: 50, Fmax: 72})};
     color: ${theme.colors.primaryTextColor};
 `
 
@@ -84,6 +81,11 @@ const Photo = styled.img`
     width: 465px;
     height: 675px;
     z-index: 99999;
+    
+    @media ${theme.media.tablet} {
+        width: 254px;
+        height: 362px;
+    }
 `
 
 const PhotoContainer = styled.div`
@@ -94,11 +96,13 @@ const PhotoContainer = styled.div`
     justify-content: flex-end;
     
     &::before {
-        content: url('${firstEllipse}');
+        content:"";
+        background: url('${firstEllipse}') no-repeat center;
+        background-size: contain;
         margin: 0;
        
-        width: fit-content;
-        height: fit-content;
+        width: 880px;
+        height: 880px;
         
         display: inline-block;
         
@@ -107,13 +111,11 @@ const PhotoContainer = styled.div`
         
         left: -220px;
         bottom: -152px;
+        
+        @media ${theme.media.tablet} {
+            width: 514px;
+            height: 514px;
+        }
     }
-`
-const MainEllipse = styled.img`
-    display: block;
-    position: absolute;
-    bottom: -150px;
-    left: -215px;
-    
 `
 
