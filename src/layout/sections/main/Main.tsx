@@ -14,7 +14,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <MainFlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"} direction={"row"}>
+                <MainFlexWrapper justify={"space-between"} align={"center"} wrap={"wrap"} direction={"row"}>
                     <FlexWrapper gap={"27px"} direction={"column"} justify={"flex-start"} height={"content"}>
                         <Greeting>HELLO</Greeting>
                         <Name>I’m Gleb</Name>
@@ -38,9 +38,9 @@ export const Main = () => {
 };
 
 const MainFlexWrapper = styled(FlexWrapper)`
-    // @media ${theme.media.mainFlex} {
-    //     ${props => props.direction = "column"};
-    // }
+    @media ${theme.media.mainFlex} {
+        flex-direction: column;
+    }
 `
 const Greeting = styled.h2`
     ${font({fontFamily:"Next-art, sans-serif", fontWeight: 600, Fmin: 27, Fmax: 48})};
@@ -100,13 +100,16 @@ const PhotoContainer = styled.div`
         
         left: -220px;
         bottom: -152px;
+    }
+    @media ${theme.media.tablet} {
+       &::before {
+           width: 480px;
+           height: 480px;
+           left: -116px;
+           bottom: -90px;
+       } 
         
-        @media ${theme.media.tablet} {
-            width: 480px;
-            height: 480px;
-            left: -116px;
-            bottom: -90px;
-        }
+        margin-left: 30px;
     }
 `
 
