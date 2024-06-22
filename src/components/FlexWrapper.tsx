@@ -8,6 +8,8 @@ type FlexWrapperProps = {
     width?: string;
     height?: string;
     gap?: string;
+    columnGap?: string;
+    rowGap?: string;
     margin?: string;
 }
 
@@ -22,5 +24,7 @@ export const FlexWrapper = styled.div<FlexWrapperProps>`
     gap: ${props => props.gap};
     //border: 1px solid yellow;
     margin: ${props => props.margin || "0"};
+    column-gap: ${props => props.columnGap};
+    row-gap: ${props => props.rowGap};
     
 `
