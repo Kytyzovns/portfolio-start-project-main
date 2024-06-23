@@ -23,7 +23,7 @@ export const Skills = () => {
 };
 
 const SkillFlexWrapper = styled(FlexWrapper)`
-    @mdeia ${theme.media.tablet} {
+    @media ${theme.media.tablet} {
         gap: 0;
         // ${props => props.gap = "0"};
     }
