@@ -10,6 +10,8 @@ export const Skills = () => {
                 <SkillFlexWrapper wrap="wrap" justify={"center"}>
                     <Skill iconId={"pen"} text={"ProductDesign"} iconHeight={"108"} iconWidth={"107"}
                            viewBox={"0 0 107 108"}/>
+                    <Skill iconId={"pen1"} text={"ProductDesign"} iconHeight={"71"} iconWidth={"71"}
+                           viewBox={"0 0 71 71"}/>
                     <Skill isText={true} title={"UX/UI"} text={"UX/UI Design"}/>
                     <Skill iconId={"nav"} text={"Icon Design"}/>
                     <Skill iconId={"logoDesign"} text={"Logo Design"}/>
@@ -23,9 +25,9 @@ export const Skills = () => {
 };
 
 const SkillFlexWrapper = styled(FlexWrapper)`
+    gap: 30px;
     @media ${theme.media.tablet} {
-        gap: 0;
-        // ${props => props.gap = "0"};
+        gap: 20px;
     }
 `
 

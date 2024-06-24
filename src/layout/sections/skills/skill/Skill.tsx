@@ -50,6 +50,12 @@ const StyledSkill = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    @media ${theme.media.skillsFlex} {
+        width: 150px;
+        height: 150px;
+    }
+    
+    
 `
 
 const SkillText = styled.span`
@@ -58,6 +64,9 @@ const SkillText = styled.span`
     font-weight: 300;
     font-size: 24px;
     color: ${theme.colors.primaryTextColor};
+    @media ${theme.media.skillsFlex} {
+        font-size: 18px;
+    }
 `
 
 const SkillTitle = styled.h3`
@@ -65,6 +74,9 @@ const SkillTitle = styled.h3`
     font-weight: 700;
     font-size: 48px;
     color: ${theme.colors.accent};
+    @media ${theme.media.skillsFlex} {
+        font-size: 36px;
+    }
 `
 
 

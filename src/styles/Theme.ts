@@ -20,5 +20,6 @@ export const theme = {
         tablet: "screen and (max-width: 785px)",
         mobile: "screen and (max-width: 456px)",
         mainFlex: "screen and (max-width: 1015px)",
+        skillsFlex: "screen and (max-width: 620px)",
     }
 }
