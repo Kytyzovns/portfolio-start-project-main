@@ -29,6 +29,8 @@ const SkillFlexWrapper = styled(FlexWrapper)`
     @media ${theme.media.tablet} {
         gap: 20px;
     }
+    
+    ${Skill}:nth-of-type()
 `
 
 export const StyledSkills = styled.section`

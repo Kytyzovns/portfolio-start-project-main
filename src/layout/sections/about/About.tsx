@@ -89,21 +89,21 @@ const StyledAbout = styled.section`
     min-height: 120vh;
     padding-bottom: 150px;
     z-index: 0;
-    &::before {
-        content: url('${thirdEllipse}');
-        margin: 0;
-
-        width: fit-content;
-        height: fit-content;
-
-        display: block;
-
-        position: absolute;
-        z-index: 1;
-
-        right: 46px;
-        bottom: -40px;
-    }
+    // &::before {
+    //     content: url('${thirdEllipse}');
+    //     margin: 0;
+    //
+    //     width: fit-content;
+    //     height: fit-content;
+    //
+    //     display: block;
+    //
+    //     position: absolute;
+    //     z-index: 1;
+    //
+    //     right: 46px;
+    //     bottom: -40px;
+    // }
 `
 
 

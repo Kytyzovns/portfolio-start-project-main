@@ -1,6 +1,6 @@
 import React from 'react';
 import {Icon} from "../../../../components/Icon/Icon";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../../../../styles/Theme";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 
@@ -12,6 +12,7 @@ type SkillProps = {
     iconWidth?: string;
     iconHeight?: string;
     viewBox?: string;
+    noMedia?: "mobile" | "tablet" | "skillsFlex";
 }
 
 export const Skill = (props: SkillProps) => {
@@ -40,7 +41,7 @@ export const Skill = (props: SkillProps) => {
     }
 };
 
-const StyledSkill = styled.div`
+const StyledSkill = styled.div<SkillProps>`
     border-radius: 29px;
     width: 270px;
     height: 270px;
@@ -54,8 +55,12 @@ const StyledSkill = styled.div`
         width: 150px;
         height: 150px;
     }
-    
-    
+
+    // ${props => props.noMedia && css<SkillProps>`
+    //     @media ${props.theme.media(props.noMedia)} {
+    //         display: none;
+    //     }
+    // `}
 `
 
 const SkillText = styled.span`
