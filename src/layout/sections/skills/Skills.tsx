@@ -30,7 +30,6 @@ const SkillFlexWrapper = styled(FlexWrapper)`
         gap: 20px;
     }
     
-    ${Skill}:nth-of-type()
 `
 
 export const StyledSkills = styled.section`
