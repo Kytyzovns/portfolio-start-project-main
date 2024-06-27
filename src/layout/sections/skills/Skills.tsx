@@ -9,9 +9,9 @@ export const Skills = () => {
         <StyledSkills>
                 <SkillFlexWrapper wrap="wrap" justify={"center"}>
                     <Skill iconId={"pen"} text={"ProductDesign"} iconHeight={"108"} iconWidth={"107"}
-                           viewBox={"0 0 107 108"}/>
+                           viewBox={"0 0 107 108"} noMedia={"skillsFlex"}/>
                     <Skill iconId={"pen1"} text={"ProductDesign"} iconHeight={"71"} iconWidth={"71"}
-                           viewBox={"0 0 71 71"}/>
+                           viewBox={"0 0 71 71"} noMedia={"aboveSkillsFlex"}/>
                     <Skill isText={true} title={"UX/UI"} text={"UX/UI Design"}/>
                     <Skill iconId={"nav"} text={"Icon Design"}/>
                     <Skill iconId={"logoDesign"} text={"Logo Design"}/>
@@ -26,8 +26,14 @@ export const Skills = () => {
 
 const SkillFlexWrapper = styled(FlexWrapper)`
     gap: 30px;
+    outline: 1px solid red;
     @media ${theme.media.tablet} {
         gap: 20px;
+    }
+    @media ${theme.media.skillsFlex} {
+        justify-content: flex-start;
+        display: inline-flex;
+        width: fit-content;
     }
     
 `
@@ -35,4 +41,6 @@ const SkillFlexWrapper = styled(FlexWrapper)`
 export const StyledSkills = styled.section`
     min-height: 40vh;
     padding: 110px 0 100px 0;
+    display: flex;
+    justify-content: center;
 `

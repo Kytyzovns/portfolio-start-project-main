@@ -12,56 +12,22 @@ type SkillProps = {
     iconWidth?: string;
     iconHeight?: string;
     viewBox?: string;
-    noMedia?: "mobile" | "tablet" | "skillsFlex";
+    noMedia?: "mobile" | "tablet" | "skillsFlex" | "aboveSkillsFlex";
 }
 
 export const Skill = (props: SkillProps) => {
-    let id = "";
-    if (props.iconId !== undefined) {
-        id = props.iconId;
-    }
-    if (props.isText === true) {
-        return (
-            <StyledSkill>
-                <FlexWrapper direction={"column"} justify={"center"}>
-                    <SkillTitle>{props.title}</SkillTitle>
-                </FlexWrapper>
-                <SkillText>{props.text}</SkillText>
-            </StyledSkill>
-        );
-    } else {
-        return (
-            <StyledSkill>
-                <FlexWrapper direction={"column"} justify={"center"}>
-                    <Icon iconId={id} width={props.iconWidth} height={props.iconHeight} viewBox={props.viewBox}/>
-                </FlexWrapper>
-                <SkillText>{props.text}</SkillText>
-            </StyledSkill>
-        );
-    }
-};
+    return (
+        <StyledSkill noMedia={props.noMedia}>
+            <FlexWrapper direction={"column"} justify={"center"}>
+                <SkillTitle>{props.title}</SkillTitle>
+                <Icon iconId={props.iconId || "pen"} width={props.iconWidth} height={props.iconHeight}
+                      viewBox={props.viewBox} isHidden={props.isText}></Icon>
+            </FlexWrapper>
+            <SkillText>{props.text}</SkillText>
+        </StyledSkill>
+    );
+}
 
-const StyledSkill = styled.div<SkillProps>`
-    border-radius: 29px;
-    width: 270px;
-    height: 270px;
-    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.47);
-    background: ${theme.colors.skillBg};
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    @media ${theme.media.skillsFlex} {
-        width: 150px;
-        height: 150px;
-    }
-
-    // ${props => props.noMedia && css<SkillProps>`
-    //     @media ${props.theme.media(props.noMedia)} {
-    //         display: none;
-    //     }
-    // `}
-`
 
 const SkillText = styled.span`
     display: inline-block;
@@ -84,5 +50,26 @@ const SkillTitle = styled.h3`
     }
 `
 
+const StyledSkill = styled.div<SkillProps>`
+    border-radius: 29px;
+    width: 270px;
+    height: 270px;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.47);
+    background: ${theme.colors.skillBg};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    @media ${theme.media.skillsFlex} {
+        width: 150px;
+        height: 150px;
+    }
 
+    ${props => props.noMedia && css`
+        @media ${props.theme.media[props.noMedia]} {
+            display: none;
+        }
+    `}
+`
 
