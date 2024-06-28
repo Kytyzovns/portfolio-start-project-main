@@ -7,6 +7,7 @@ import {theme} from "../../../styles/Theme";
 export const Skills = () => {
     return (
         <StyledSkills>
+            <FlexWrapper align={"center"} justify={"center"}>
                 <SkillFlexWrapper wrap="wrap" justify={"center"}>
                     <Skill iconId={"pen"} text={"ProductDesign"} iconHeight={"108"} iconWidth={"107"}
                            viewBox={"0 0 107 108"} noMedia={"skillsFlex"}/>
@@ -19,6 +20,7 @@ export const Skills = () => {
                     <Skill iconId={"display"} text={"Frontend"}/>
                     <Skill iconId={"motion"} text={"Motion"}/>
                 </SkillFlexWrapper>
+            </FlexWrapper>
         </StyledSkills>
 
     );
@@ -27,13 +29,12 @@ export const Skills = () => {
 const SkillFlexWrapper = styled(FlexWrapper)`
     gap: 30px;
     outline: 1px solid red;
+    
     @media ${theme.media.tablet} {
         gap: 20px;
     }
     @media ${theme.media.skillsFlex} {
-        justify-content: flex-start;
-        display: inline-flex;
-        width: fit-content;
+        
     }
     
 `
