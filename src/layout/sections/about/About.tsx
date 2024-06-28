@@ -10,12 +10,14 @@ import {Skills} from "../skills/Skills";
 import firstEllipse from "../../../assets/images/oldsvg/Ellipse 8.png"
 import secondEllipse from "../../../assets/images/oldsvg/Ellipse 6.png"
 import thirdEllipse from "../../../assets/images/oldsvg/Ellipse 7.png"
+import {MobileSkills} from "../skills/MobileSkills";
 
 
 export const About = () => {
     return (
         <StyledAbout>
             <Container>
+                <MobileSkills/>
                 <Skills/>
                 {/*<EmptyContainer>*/}
                 {/*    <StyledAboutTitle>ABOUT ME</StyledAboutTitle>*/}

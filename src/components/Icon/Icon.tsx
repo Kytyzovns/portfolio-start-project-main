@@ -47,10 +47,4 @@ const StyledSvg = styled.svg<StyledSvgProps>`
         display: none;
     `}
     
-    ${props => props.iconType === "skill" && css`
-    @media ${theme.media.skillsFlex} {
-        width: 50px;
-        height: 50px;
-    }
-    `} 
 `

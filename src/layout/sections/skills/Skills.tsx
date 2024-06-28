@@ -8,40 +8,29 @@ export const Skills = () => {
     return (
         <StyledSkills>
             <FlexWrapper align={"center"} justify={"center"}>
-                <SkillFlexWrapper wrap="wrap" justify={"center"}>
-                    <Skill iconId={"pen"} text={"ProductDesign"} iconHeight={"108"} iconWidth={"107"}
-                           viewBox={"0 0 107 108"} noMedia={"skillsFlex"}/>
-                    <Skill iconId={"pen1"} text={"ProductDesign"} iconHeight={"71"} iconWidth={"71"}
-                           viewBox={"0 0 71 71"} noMedia={"aboveSkillsFlex"}/>
-                    <Skill isText={true} title={"UX/UI"} text={"UX/UI Design"}/>
-                    <Skill iconId={"nav"} text={"Icon Design"}/>
-                    <Skill iconId={"logoDesign"} text={"Logo Design"}/>
-                    <Skill isText={true} title={"</>"} text={"Backend"}/>
-                    <Skill iconId={"display"} text={"Frontend"}/>
-                    <Skill iconId={"motion"} text={"Motion"}/>
-                </SkillFlexWrapper>
+                <FlexWrapper wrap="wrap" justify={"center"} gap={"30px"}>
+                    <Skill iconId={"pen"} text={"ProductDesign"} iconHeight={"108"} iconWidth={"108"}
+                           viewBox={"0 0 108 108"} paddingTop={"50px"}/>
+                    <Skill isText={true} title={"UX/UI"} text={"UX/UI Design"} paddingTop={"76px"}/>
+                    <Skill iconId={"nav"} text={"Icon Design"} paddingTop={"66px"}/>
+                    <Skill iconId={"logoDesign"} text={"Logo Design"} paddingTop={"66px"}/>
+                    <Skill isText={true} title={"</>"} text={"Backend"} paddingTop={"50px"}/>
+                    <Skill iconId={"display"} text={"Frontend"} paddingTop={"50px"}/>
+                    <Skill iconId={"motion"} text={"Motion"} paddingTop={"50px"}/>
+                </FlexWrapper>
             </FlexWrapper>
         </StyledSkills>
 
     );
 };
 
-const SkillFlexWrapper = styled(FlexWrapper)`
-    gap: 30px;
-    outline: 1px solid red;
-    
-    @media ${theme.media.tablet} {
-        gap: 20px;
-    }
-    @media ${theme.media.skillsFlex} {
-        
-    }
-    
-`
-
 export const StyledSkills = styled.section`
     min-height: 40vh;
     padding: 110px 0 100px 0;
     display: flex;
     justify-content: center;
+    
+    @media ${theme.media.skillsFlex} {
+        display: none;
+    }
 `
