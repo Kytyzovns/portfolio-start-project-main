@@ -19,44 +19,44 @@ export const About = () => {
             <Container>
                 <MobileSkills/>
                 <Skills/>
-                {/*<EmptyContainer>*/}
-                {/*    <StyledAboutTitle>ABOUT ME</StyledAboutTitle>*/}
-                {/*    <StyledPhotoContainer topPosition={"-45px"} leftPosition={"-290px"} zIndex={"2"}>*/}
-                {/*        <StyledAboutPhoto src={firstPhoto} alt="firstPhoto"/>*/}
-                {/*    </StyledPhotoContainer>*/}
+                <EmptyContainer>
+                    <StyledAboutTitle>ABOUT ME</StyledAboutTitle>
+                    <StyledPhotoContainer topPosition={"-45px"} leftPosition={"-290px"} zIndex={"2"}>
+                        <StyledAboutPhoto src={firstPhoto} alt="firstPhoto"/>
+                    </StyledPhotoContainer>
 
-                {/*    <StyledPhotoContainer topPosition={"190px"} rightPosition={"-290px"} zIndex={"2"}>*/}
-                {/*        <StyledAboutPhoto src={secondPhoto} alt="secondPhoto"/>*/}
-                {/*    </StyledPhotoContainer>*/}
+                    <StyledPhotoContainer topPosition={"190px"} rightPosition={"-290px"} zIndex={"2"}>
+                        <StyledAboutPhoto src={secondPhoto} alt="secondPhoto"/>
+                    </StyledPhotoContainer>
 
-                {/*    <StyledPhotoContainer bottomPosition={"-45px"} leftPosition={"-270px"} zIndex={"2"}>*/}
-                {/*        <StyledAboutPhoto src={thirdPhoto} alt="thirdPhoto"/>*/}
-                {/*    </StyledPhotoContainer>*/}
+                    <StyledPhotoContainer bottomPosition={"-45px"} leftPosition={"-270px"} zIndex={"2"}>
+                        <StyledAboutPhoto src={thirdPhoto} alt="thirdPhoto"/>
+                    </StyledPhotoContainer>
 
-                {/*    <Head src={aboutHead} alt="aboutFirstHead"/>*/}
+                    <Head src={aboutHead} alt="aboutFirstHead"/>
 
-                {/*    <StyledTextContainer>*/}
-                {/*        <StyledAboutText>Hello again everyone! So, you already know that my name is Gleb. A little about*/}
-                {/*            myself: student, 18 y.o., athlete-football player, I love creativity since childhood, I live*/}
-                {/*            in*/}
-                {/*            Donetsk, Ukraine. Why programming? Everything is elementary - I like it, the profession of*/}
-                {/*            the*/}
-                {/*            future, thanks to which I can provide myself and fulfill my dream - travel, at the moment I*/}
-                {/*            specialize in web design, front-end and back-end development, turnkey websites. Why should*/}
-                {/*            you*/}
-                {/*            choose me? I approach each order with great responsibility and love, as I want to make a*/}
-                {/*            name*/}
-                {/*            for myself, exclude plagiarism and negligence, fully study the project, the client and its*/}
-                {/*            target audience, work for quality, trying to make an order as quickly and uniquely as*/}
-                {/*            possible,*/}
-                {/*            taking into account all the edits and wishes.*/}
-                {/*            By trusting me, you will get the maximum return for your project, save your nerves and time.*/}
-                {/*            If you are interested in me , you want to know something more or use my services, then I*/}
-                {/*            will*/}
-                {/*            provide all my contacts below.*/}
-                {/*        </StyledAboutText>*/}
-                {/*    </StyledTextContainer>*/}
-                {/*</EmptyContainer>*/}
+                    <StyledTextContainer>
+                        <StyledAboutText>Hello again everyone! So, you already know that my name is Gleb. A little about
+                            myself: student, 18 y.o., athlete-football player, I love creativity since childhood, I live
+                            in
+                            Donetsk, Ukraine. Why programming? Everything is elementary - I like it, the profession of
+                            the
+                            future, thanks to which I can provide myself and fulfill my dream - travel, at the moment I
+                            specialize in web design, front-end and back-end development, turnkey websites. Why should
+                            you
+                            choose me? I approach each order with great responsibility and love, as I want to make a
+                            name
+                            for myself, exclude plagiarism and negligence, fully study the project, the client and its
+                            target audience, work for quality, trying to make an order as quickly and uniquely as
+                            possible,
+                            taking into account all the edits and wishes.
+                            By trusting me, you will get the maximum return for your project, save your nerves and time.
+                            If you are interested in me , you want to know something more or use my services, then I
+                            will
+                            provide all my contacts below.
+                        </StyledAboutText>
+                    </StyledTextContainer>
+                </EmptyContainer>
 
 
             </Container>
@@ -111,6 +111,7 @@ const StyledAbout = styled.section`
 
 const StyledAboutPhoto = styled.img`
     display: block;
+    z-index: 1;
 `
 
 const StyledTextContainer = styled.div`
@@ -158,8 +159,9 @@ const EmptyContainer = styled.div`
     border-radius: 15px;
     width: 500px;
     height: 820px;
-    // background: ${theme.colors.skillBg};
+        // background: ${theme.colors.skillBg};
     z-index: 1;
+
     &::before {
         content: url('${firstEllipse}');
         margin: 0;
@@ -170,7 +172,7 @@ const EmptyContainer = styled.div`
         display: inline-block;
 
         position: absolute;
-        z-index: 1;
+        z-index: 0;
 
         right: -312px;
         top: -102px;
@@ -191,5 +193,22 @@ const EmptyContainer = styled.div`
         left: -590px;
         top: -65px;
     }
-    
+
+    ${StyledPhotoContainer}:nth-of-type(2) {
+       &:before {
+            content: url('${thirdEllipse}');
+            margin: 0;
+
+            width: fit-content;
+            height: fit-content;
+
+            display: block;
+
+            position: absolute;
+            z-index: -10;
+
+            right: 46px;
+            bottom: -40px;
+        }
+    }
 `
