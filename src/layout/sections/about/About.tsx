@@ -20,46 +20,46 @@ export const About = () => {
             <Container>
                 <MobileSkills/>
                 <Skills/>
-                {/*<MainAbout>*/}
-                {/*    <StyledAboutTitle>ABOUT ME</StyledAboutTitle>*/}
-                {/*    <StyledPhotoContainer topPosition={"-45px"} leftPosition={"-290px"} zIndex={"2"}>*/}
-                {/*        <StyledAboutPhoto src={firstPhoto} alt="firstPhoto"/>*/}
-                {/*    </StyledPhotoContainer>*/}
+                <MainAbout>
+                    <StyledAboutTitle>ABOUT ME</StyledAboutTitle>
+                    <StyledPhotoContainer topPosition={"-45px"} leftPosition={"-290px"} zIndex={"2"}>
+                        <StyledAboutPhoto src={firstPhoto} alt="firstPhoto"/>
+                    </StyledPhotoContainer>
 
-                {/*    <StyledPhotoContainer topPosition={"190px"} rightPosition={"-290px"} zIndex={"2"}>*/}
-                {/*        <StyledAboutPhoto src={secondPhoto} alt="secondPhoto"/>*/}
-                {/*    </StyledPhotoContainer>*/}
+                    <StyledPhotoContainer topPosition={"190px"} rightPosition={"-290px"} zIndex={"2"}>
+                        <StyledAboutPhoto src={secondPhoto} alt="secondPhoto"/>
+                    </StyledPhotoContainer>
 
-                {/*    <StyledPhotoContainer bottomPosition={"-45px"} leftPosition={"-270px"} zIndex={"2"}>*/}
-                {/*        <StyledAboutPhoto src={thirdPhoto} alt="thirdPhoto"/>*/}
-                {/*    </StyledPhotoContainer>*/}
+                    <StyledPhotoContainer bottomPosition={"-45px"} leftPosition={"-270px"} zIndex={"2"}>
+                        <StyledAboutPhoto src={thirdPhoto} alt="thirdPhoto"/>
+                    </StyledPhotoContainer>
 
-                {/*    <Head src={aboutHead} alt="aboutFirstHead"/>*/}
+                    <Head src={aboutHead} alt="aboutFirstHead"/>
 
-                {/*    <CircleContainer/>*/}
+                    <CircleContainer/>
 
-                {/*    <StyledTextContainer>*/}
-                {/*        <StyledAboutText>Hello again everyone! So, you already know that my name is Gleb. A little about*/}
-                {/*            myself: student, 18 y.o., athlete-football player, I love creativity since childhood, I live*/}
-                {/*            in*/}
-                {/*            Donetsk, Ukraine. Why programming? Everything is elementary - I like it, the profession of*/}
-                {/*            the*/}
-                {/*            future, thanks to which I can provide myself and fulfill my dream - travel, at the moment I*/}
-                {/*            specialize in web design, front-end and back-end development, turnkey websites. Why should*/}
-                {/*            you*/}
-                {/*            choose me? I approach each order with great responsibility and love, as I want to make a*/}
-                {/*            name*/}
-                {/*            for myself, exclude plagiarism and negligence, fully study the project, the client and its*/}
-                {/*            target audience, work for quality, trying to make an order as quickly and uniquely as*/}
-                {/*            possible,*/}
-                {/*            taking into account all the edits and wishes.*/}
-                {/*            By trusting me, you will get the maximum return for your project, save your nerves and time.*/}
-                {/*            If you are interested in me , you want to know something more or use my services, then I*/}
-                {/*            will*/}
-                {/*            provide all my contacts below.*/}
-                {/*        </StyledAboutText>*/}
-                {/*    </StyledTextContainer>*/}
-                {/*</MainAbout>*/}
+                    <StyledTextContainer>
+                        <StyledAboutText>Hello again everyone! So, you already know that my name is Gleb. A little about
+                            myself: student, 18 y.o., athlete-football player, I love creativity since childhood, I live
+                            in
+                            Donetsk, Ukraine. Why programming? Everything is elementary - I like it, the profession of
+                            the
+                            future, thanks to which I can provide myself and fulfill my dream - travel, at the moment I
+                            specialize in web design, front-end and back-end development, turnkey websites. Why should
+                            you
+                            choose me? I approach each order with great responsibility and love, as I want to make a
+                            name
+                            for myself, exclude plagiarism and negligence, fully study the project, the client and its
+                            target audience, work for quality, trying to make an order as quickly and uniquely as
+                            possible,
+                            taking into account all the edits and wishes.
+                            By trusting me, you will get the maximum return for your project, save your nerves and time.
+                            If you are interested in me , you want to know something more or use my services, then I
+                            will
+                            provide all my contacts below.
+                        </StyledAboutText>
+                    </StyledTextContainer>
+                </MainAbout>
 
             </Container>
             <MobileAbout/>
@@ -91,10 +91,11 @@ const StyledAboutText = styled.p`
 const StyledAbout = styled.section`
     position: relative;
     background: ${theme.colors.secondaryBg};
-    min-height: 120vh;
+    min-height: 100vh;
     padding-bottom: 150px;
     z-index: 0;
     box-sizing: border-box;
+    overflow: hidden;
 `
 
 
@@ -121,6 +122,7 @@ type StyledPhotoContainerProps = {
     rightPosition?: string;
     bottomPosition?: string;
     zIndex?: string;
+    transform?: string;
 }
 
 export const StyledPhotoContainer = styled.div<StyledPhotoContainerProps>`
@@ -129,6 +131,7 @@ export const StyledPhotoContainer = styled.div<StyledPhotoContainerProps>`
     right: ${props => props.rightPosition};
     bottom: ${props => props.bottomPosition};
     z-index: ${props => props.zIndex};
+    transform: translateX(${props => props.transform});
     border-radius: 15px;
     padding: 15px;
     background-color: ${theme.colors.skillBg};
@@ -181,6 +184,10 @@ const MainAbout = styled.div`
 
         left: -590px;
         top: -65px;
+    }
+    
+    @media ${theme.media.aboutWrap} {
+        display: none;
     }
 `
 

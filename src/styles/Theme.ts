@@ -21,6 +21,6 @@ export const theme = {
         mobile: "screen and (max-width: 456px)",
         mainFlex: "screen and (max-width: 1015px)",
         skillsFlex: "screen and (max-width: 602px)",
-        aboutWrap: "screen and (max-width: 1315px)",
+        aboutWrap: "screen and (max-width: 910px)",
     }
 }

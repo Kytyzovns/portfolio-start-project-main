@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme";
 import {StyledPhotoContainer} from "./About";
 import thirdPhoto from "../../../assets/images/thirdAboutPhoto.webp"
+import firstEllipse from "../../../assets/images/oldsvg/EllipsMobile1.png"
 
 export const MobileAbout = () => {
     return (
@@ -20,10 +21,11 @@ export const MobileAbout = () => {
                 By trusting me, you will get the maximum return for your project, save your nerves and time.
                 If you are interested in me , you want to know something more or use my services, then I will provide
                 all my contacts below.
-            </StyledText>
-                <StyledPhotoContainer bottomPosition={"-45px"} leftPosition={"-70px"} zIndex={"2"}>
+
+                <StyledPhotoContainer bottomPosition={"-330px"} leftPosition={"50%"} zIndex={"2"} transform={"-50%"}>
                     <AboutPhoto src={thirdPhoto} alt="thirdPhoto"/>
                 </StyledPhotoContainer>
+            </StyledText>
         </TextContainer>
     );
 };
@@ -36,24 +38,43 @@ const AboutPhoto = styled.img`
 const TextContainer = styled.div`
     //position: relative;
     display: flex;
-    padding: 63px 16px 0 16px;
+    padding: 62px 16px 52px 16px;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 auto 500px auto;
     border-radius: 15px;
     max-width: 500px;
     min-height: 820px;
     background: ${theme.colors.skillBg};
     z-index: 1;
+    
+    @media not ${theme.media.aboutWrap} {
+        display: none;
+    }
 `
 
 const StyledText = styled.p`
     position: relative;
-    display: inline-block;
+    display: block;
     max-width: 370px;
     font-weight: 300;
     font-size: 20px;
     letter-spacing: 0.01em;
+    &:before {
+        content: url('${firstEllipse}');
+        margin: 0;
+
+        width: fit-content;
+        height: fit-content;
+
+        display: block;
+
+        position: absolute;
+        z-index: -10;
+
+        right: -160px;
+        bottom: -500px;
+    }
 `
 const AboutTitle = styled.span`
     top: -90px;
