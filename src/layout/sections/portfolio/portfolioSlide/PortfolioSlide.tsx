@@ -4,10 +4,11 @@ import styled from "styled-components";
 import slideImage from "../../../../assets/images/portfolioImage.webp"
 import {theme} from "../../../../styles/Theme";
 import {StyledBtn} from "../../../../components/StyledBtn";
+import {ArrowBtn} from "../../../../components/arrowButton/ArrowBtn";
 
 export const PortfolioSlide = () => {
     return (
-        <SlideContainer align={"center"} justify={"space-around"}>
+        <SlideContainer align={"center"} justify={"space-around"} wrap={"wrap"}>
             <ImageContainer>
                 <StyledBtn>View project</StyledBtn>
                 <StyledSlideImage src={slideImage}/>
@@ -24,9 +25,31 @@ export const PortfolioSlide = () => {
                 </StyledSlideText>
                 <StyledSlideLink>More -{">"}</StyledSlideLink>
             </FlexWrapper>
+            <BtnContainer>
+                <ArrowBtn direction={"left"}/>
+                <ArrowBtn direction={"right"}/>
+            </BtnContainer>
         </SlideContainer>
     );
 };
+
+const BtnContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 1170px;
+    z-index: 10;
+    transform: translate(-100px, 50%); 
+    
+    @media ${theme.media.btnWrap} {
+        transform: translate(-50%, 0);
+        bottom: -110px;
+        width: 176px;
+        left: 50%;
+    }
+`
 
 const ImageContainer = styled.div`
     position: relative;
@@ -66,8 +89,10 @@ const ImageContainer = styled.div`
 `
 
 const StyledSlideImage = styled.img`
-    width: 495px;
-    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
     border-radius: 30px;
     display: block;
 `
@@ -93,13 +118,20 @@ const StyledSlideLink = styled.a`
     cursor: pointer;
 `
 const SlideContainer = styled(FlexWrapper)`
+    position: relative;
     border-radius: 30px;
-    width: 970px;
-    height: 600px;
+    max-width: max-content;
+    min-height: 600px;
+    
+    height: 100%;
     box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 0.28);
     background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
     padding: 50px;
     box-sizing: border-box;
     gap: 80px;
     margin-top: 50px;
+    
+    @media ${theme.media.tablet} {
+        padding: 30px 25px;
+    }
 `

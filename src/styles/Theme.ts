@@ -22,5 +22,6 @@ export const theme = {
         mainFlex: "screen and (max-width: 1015px)",
         skillsFlex: "screen and (max-width: 602px)",
         aboutWrap: "screen and (max-width: 910px)",
+        btnWrap: "screen and (max-width: 1170px)",
     }
 }

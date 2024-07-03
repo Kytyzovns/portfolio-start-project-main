@@ -13,9 +13,7 @@ export const Portfolio = () => {
                 <FlexWrapper direction={"column"} justify={"center"} align={"center"}>
                     <StyledPortfolioTitle>Portfolio</StyledPortfolioTitle>
                     <FlexWrapper gap={"40px"}>
-                        <ArrowBtn direction={"left"}/>
                         <PortfolioSlide/>
-                        <ArrowBtn direction={"right"}/>
                     </FlexWrapper>
                 </FlexWrapper>
             </Container>
@@ -33,3 +31,4 @@ const StyledPortfolioTitle = styled.h2`
     font-size: 48px;
     color: ${theme.colors.secondaryTextColor};
 `
+
