@@ -12,9 +12,9 @@ export const Portfolio = () => {
             <Container>
                 <FlexWrapper direction={"column"} justify={"center"} align={"center"}>
                     <StyledPortfolioTitle>Portfolio</StyledPortfolioTitle>
-                    <FlexWrapper gap={"40px"}>
+
                         <PortfolioSlide/>
-                    </FlexWrapper>
+
                 </FlexWrapper>
             </Container>
         </StyledPortfolio>

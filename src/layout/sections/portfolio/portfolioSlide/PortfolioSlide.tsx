@@ -8,7 +8,7 @@ import {ArrowBtn} from "../../../../components/arrowButton/ArrowBtn";
 
 export const PortfolioSlide = () => {
     return (
-        <SlideContainer align={"center"} justify={"space-around"} wrap={"wrap"}>
+        <SlideContainer align={"center"} justify={"space-between"} wrap={"wrap"}>
             <ImageContainer>
                 <StyledBtn>View project</StyledBtn>
                 <StyledSlideImage src={slideImage}/>
@@ -120,15 +120,14 @@ const StyledSlideLink = styled.a`
 const SlideContainer = styled(FlexWrapper)`
     position: relative;
     border-radius: 30px;
-    max-width: max-content;
+    max-width: 970px;
     min-height: 600px;
-    
+    width: 100%;
     height: 100%;
     box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 0.28);
     background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
     padding: 50px;
     box-sizing: border-box;
-    gap: 80px;
     margin-top: 50px;
     
     @media ${theme.media.tablet} {
