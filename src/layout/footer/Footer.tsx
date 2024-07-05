@@ -12,7 +12,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <FlexWrapper justify={"center"} align={"center"} gap={"80px"}>
+                <FlexWrapper justify={"center"} align={"center"} gap={"80px"} >
                     <Menu direction={"column"} gap={"18px"}/>
                     <StyledContacts>
                         <StyledContactItem>Contact</StyledContactItem>
@@ -52,7 +52,7 @@ const StyledContacts = styled.ul`
 `
 
 const StyledContactItem = styled.li`
-
+    white-space: nowrap;
 `
 
 const StyledSmall = styled.small`

@@ -122,15 +122,19 @@ const SlideContainer = styled(FlexWrapper)`
     border-radius: 30px;
     max-width: 970px;
     min-height: 600px;
-    width: 100%;
     height: 100%;
+    width: 100%;
     box-shadow: 0 4px 15px 0 rgba(27, 27, 27, 0.28);
     background: linear-gradient(135deg, #414141 0%, #2d2d2d 100%);
     padding: 50px;
     box-sizing: border-box;
     margin-top: 50px;
+    flex-direction: row;
     
-    @media ${theme.media.tablet} {
+    @media ${theme.media.slideWrap} {
+        flex-direction: column;
         padding: 30px 25px;
+        gap: 58px;
+        max-width: 700px;
     }
 `

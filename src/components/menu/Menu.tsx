@@ -34,6 +34,7 @@ export const Menu = (props: MenuProps) => {
 
 const StyledNav = styled.nav<MenuProps>`
     ul {
+        white-space: nowrap;
         display: flex;
         flex-direction: ${props => props.direction};
         gap: ${props => props.gap};

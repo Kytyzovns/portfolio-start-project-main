@@ -23,5 +23,6 @@ export const theme = {
         skillsFlex: "screen and (max-width: 602px)",
         aboutWrap: "screen and (max-width: 910px)",
         btnWrap: "screen and (max-width: 1170px)",
+        slideWrap: "screen and (max-width: 920px)",
     }
 }
