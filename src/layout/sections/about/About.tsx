@@ -92,7 +92,7 @@ const StyledAbout = styled.section`
     position: relative;
     background: ${theme.colors.secondaryBg};
     min-height: 100vh;
-    padding-bottom: 150px;
+    padding-bottom: 160px;
     z-index: 0;
     box-sizing: border-box;
     overflow: hidden;

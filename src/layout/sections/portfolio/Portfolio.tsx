@@ -12,9 +12,7 @@ export const Portfolio = () => {
             <Container>
                 <FlexWrapper direction={"column"} justify={"center"} align={"center"}>
                     <StyledPortfolioTitle>Portfolio</StyledPortfolioTitle>
-
                         <PortfolioSlide/>
-
                 </FlexWrapper>
             </Container>
         </StyledPortfolio>
@@ -23,7 +21,10 @@ export const Portfolio = () => {
 
 const StyledPortfolio = styled.section`
     background: ${theme.colors.primaryBg};
-    padding: 105px 0 150px 0;
+    padding: 100px 0 150px 0;
+    @media ${theme.media.tablet} {
+        padding: 90px 0 200px 0;
+    }
 `
 
 const StyledPortfolioTitle = styled.h2`

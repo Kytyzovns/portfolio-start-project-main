@@ -32,7 +32,7 @@ export const MobileSkills = () => {
 
 export const StyledMobileSkills = styled.section`
     min-height: 40vh;
-    padding: 110px 0 100px 0;
+    padding: 90px 0 82px 0;
     justify-content: center;
     display: none;
     

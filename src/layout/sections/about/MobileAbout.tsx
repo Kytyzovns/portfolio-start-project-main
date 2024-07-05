@@ -22,7 +22,7 @@ export const MobileAbout = () => {
                 If you are interested in me , you want to know something more or use my services, then I will provide
                 all my contacts below.
 
-                <StyledPhotoContainer bottomPosition={"-330px"} leftPosition={"50%"} zIndex={"2"} transform={"-50%"}>
+                <StyledPhotoContainer bottomPosition={"-350px"} leftPosition={"50%"} zIndex={"2"} transform={"-50%"}>
                     <AboutPhoto src={thirdPhoto} alt="thirdPhoto"/>
                 </StyledPhotoContainer>
             </StyledText>
@@ -41,7 +41,7 @@ const TextContainer = styled.div`
     padding: 62px 16px 52px 16px;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto 500px auto;
+    margin: 0 auto 282px auto;
     border-radius: 15px;
     max-width: 500px;
     min-height: 820px;

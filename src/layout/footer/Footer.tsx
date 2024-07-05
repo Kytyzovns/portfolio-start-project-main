@@ -12,7 +12,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <FlexWrapper justify={"center"} align={"center"} gap={"80px"} >
+                <FooterContainer justify={"space-around"} align={"center"}>
                     <Menu direction={"column"} gap={"18px"}/>
                     <StyledContacts>
                         <StyledContactItem>Contact</StyledContactItem>
@@ -20,25 +20,36 @@ export const Footer = () => {
                         <StyledContactItem>Inst: notitanic33</StyledContactItem>
                         <StyledContactItem>Calls: +7 (900) - 121 - 54 - 54</StyledContactItem>
                     </StyledContacts>
-                    <FlexWrapper direction={"column"} justify={"center"} align={"center"} gap={"63px"}>
-                        <FlexWrapper justify={"center"} align={"center"} gap={"30px"}>
+                    <LogoContainer direction={"column"} justify={"center"} align={"center"} gap={"63px"}>
+                        <LogoContainer justify={"center"} align={"center"} gap={"30px"}>
                             <FlexWrapper direction={"row"} justify={"center"} align={"center"} gap={"10px"}>
                                 <Logo iconId="logo" width="65px" height="48px" viewBox="0 0 65 48"/>
                                 <StyledLogoText>Notitanic</StyledLogoText>
                             </FlexWrapper>
                             <ArrowBtn direction={"up"}/>
-                        </FlexWrapper>
+                        </LogoContainer>
                         <StyledSmall>Copyright © 2021, Notitanic</StyledSmall>
-                    </FlexWrapper>
-                </FlexWrapper>
+                    </LogoContainer>
+                </FooterContainer>
             </Container>
         </StyledFooter>
     );
 };
 
+const LogoContainer = styled(FlexWrapper)`
+    @media ${theme.media.mobile} {
+    justify-content: space-between;
+        width: 100%;
+    }
+`
+
 const StyledFooter = styled.footer`
     background: ${theme.colors.secondaryBg};
     padding: 50px 0;
+    
+    @media ${theme.media.mobile} {
+        padding: 50px 0 30px 0;
+    }
 `
 
 const StyledContacts = styled.ul`
@@ -59,4 +70,16 @@ const StyledSmall = styled.small`
     font-weight: 300;
     font-size: 18px;
     color: ${theme.colors.primaryTextColor};
+`
+
+const FooterContainer = styled(FlexWrapper)`
+    max-width: 792px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap;
+    @media ${theme.media.mobile} {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `
