@@ -1,13 +1,12 @@
 import React from 'react';
 import {Circle} from "./Circle";
-import styled from "styled-components";
-import {theme} from "../../../styles/Theme";
+import {S} from "./Main_Styles"
 
-export const MainSkills = () => {
+export const MainSkills: React.FC = () => {
     return (
-        <StyledMainSkills>
+        <S.MainSkills>
             <Circle top={"100px"} right={"22px"}>
-                <CircleText>UI</CircleText>
+                <S.CircleText>UI</S.CircleText>
             </Circle>
 
             <Circle left={"-45px"} top={"130px"}>
@@ -21,16 +20,7 @@ export const MainSkills = () => {
             <Circle left={"-90px"} bottom={"100px"}>
                 <span>PS</span>
             </Circle>
-        </StyledMainSkills>
+        </S.MainSkills>
     );
 };
 
-const CircleText = styled.span`
-    height: fit-content;
-`
-
-const StyledMainSkills = styled.div`
-    @media ${theme.media.tablet} {
-        display: none;
-    }
-`
