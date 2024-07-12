@@ -1,12 +1,11 @@
 import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {Skill} from "./skill/Skill";
-import styled from "styled-components";
-import {theme} from "../../../styles/Theme";
+import {S} from "./Skills_Styles"
 
 export const Skills = () => {
     return (
-        <StyledSkills>
+        <S.Skills>
             <FlexWrapper align={"center"} justify={"center"}>
                 <FlexWrapper wrap="wrap" justify={"center"} gap={"30px"}>
                     <Skill iconId={"pen"} text={"ProductDesign"} iconHeight={"108"} iconWidth={"108"}
@@ -19,18 +18,7 @@ export const Skills = () => {
                     <Skill iconId={"motion"} text={"Motion"} paddingTop={"50px"}/>
                 </FlexWrapper>
             </FlexWrapper>
-        </StyledSkills>
+        </S.Skills>
 
     );
 };
-
-export const StyledSkills = styled.section`
-    min-height: 40vh;
-    padding: 112px 0 100px 0;
-    display: flex;
-    justify-content: center;
-    
-    @media ${theme.media.skillsFlex} {
-        display: none;
-    }
-`

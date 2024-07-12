@@ -1,12 +1,11 @@
 import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import styled from "styled-components";
-import {theme} from "../../../styles/Theme";
 import {MobileSkill} from "./skill/MobileSkill";
+import {S} from "./Skills_Styles"
 
 export const MobileSkills = () => {
     return (
-        <StyledMobileSkills>
+        <S.MobileSkills>
             <FlexWrapper align={"center"} justify={"center"}>
                 <FlexWrapper wrap="wrap" justify={"center"} gap={"25px"}>
                     <MobileSkill iconId={"pen1"} text={"ProductDesign"} iconHeight={"70"} iconWidth={"70"}
@@ -24,19 +23,10 @@ export const MobileSkills = () => {
                                  viewBox={"0 0 50 50"} paddingTop={"35px"}/>
                 </FlexWrapper>
             </FlexWrapper>
-        </StyledMobileSkills>
+        </S.MobileSkills>
 
     );
 };
 
 
-export const StyledMobileSkills = styled.section`
-    min-height: 40vh;
-    padding: 90px 0 82px 0;
-    justify-content: center;
-    display: none;
-    
-    @media ${theme.media.skillsFlex} {
-        display: flex;
-    }
-`
+
