@@ -8,28 +8,31 @@ import {ArrowBtn} from "../../../../components/arrowButton/ArrowBtn";
 
 export const PortfolioSlide = () => {
     return (
-        <SlideContainer align={"center"} justify={"space-between"} wrap={"wrap"}>
-            <ImageContainer>
-                <StyledBtn>View project</StyledBtn>
-                <StyledSlideImage src={slideImage}/>
-            </ImageContainer>
-            <FlexWrapper direction={"column"} justify="center" align={"center"} width={"295px"} height={"435px"} gap={"25px"}>
-                <StyledSlideTitle>Landing Ice-cream</StyledSlideTitle>
-                <StyledSlideText>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut orci eu elit consequat posuere ut
-                    sed elit. Nulla et tristique felis. Morbi quis orci non purus blandit fringilla. Etiam et mollis
-                    eros. Duis venenatis vulputate lacus, non tristique eros placerat vel. Nam nec magna lacus. Etiam
-                    euismod egestas mauris nec mollis. Phasellus efficitur et ex vel condimentum. Cras enim purus,
-                    tempor sed massa vel, accumsan bibendum magna. Nullam hendrerit cursus purus, sit amet viverra arcu
-                    gravida vel.
-                </StyledSlideText>
-                <StyledSlideLink>More -{">"}</StyledSlideLink>
-            </FlexWrapper>
-            <BtnContainer>
-                <ArrowBtn direction={"left"}/>
-                <ArrowBtn direction={"right"}/>
-            </BtnContainer>
-        </SlideContainer>
+        <FlexWrapper align={"center"} justify={"center"}>
+            <SlideContainer align={"center"} justify={"space-between"} wrap={"wrap"}>
+                <ImageContainer>
+                    <StyledBtn>View project</StyledBtn>
+                    <StyledSlideImage src={slideImage}/>
+                </ImageContainer>
+                <FlexWrapper direction={"column"} justify="center" align={"center"} width={"295px"} height={"435px"} gap={"25px"}>
+                    <StyledSlideTitle>Landing Ice-cream</StyledSlideTitle>
+                    <StyledSlideText>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut orci eu elit consequat posuere ut
+                        sed elit. Nulla et tristique felis. Morbi quis orci non purus blandit fringilla. Etiam et mollis
+                        eros. Duis venenatis vulputate lacus, non tristique eros placerat vel. Nam nec magna lacus. Etiam
+                        euismod egestas mauris nec mollis. Phasellus efficitur et ex vel condimentum. Cras enim purus,
+                        tempor sed massa vel, accumsan bibendum magna. Nullam hendrerit cursus purus, sit amet viverra arcu
+                        gravida vel.
+                    </StyledSlideText>
+                    <StyledSlideLink>More -{">"}</StyledSlideLink>
+                </FlexWrapper>
+                {/*<BtnContainer>*/}
+                {/*    <ArrowBtn direction={"left"}/>*/}
+                {/*    <ArrowBtn direction={"right"}/>*/}
+                {/*</BtnContainer>*/}
+            </SlideContainer>
+        </FlexWrapper>
+
     );
 };
 

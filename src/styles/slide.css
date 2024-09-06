@@ -1,0 +1,7 @@
+.alice-carousel__dots-item:not(.__custom).__active {
+    width: 20px;
+    border-radius: 5px;
+}
+.alice-carousel__dots-item:not(.__custom) {
+
+}
